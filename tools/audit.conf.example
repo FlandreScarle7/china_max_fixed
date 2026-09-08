@@ -1,0 +1,7 @@
+proxy_host =
+proxy_ip   =
+resolvers  = 223.5.5.5, 119.29.29.29
+git_remote =
+git_name   =
+git_email  =
+raw_base   = https://raw.githubusercontent.com
