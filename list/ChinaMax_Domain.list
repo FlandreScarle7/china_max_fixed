@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-04
-# 生成 2026-09-08 08:39:50 UTC
-# 上游 114188 条 → 保留 80088 条
+# 生成 2026-09-08 20:32:09 UTC
+# 上游 114189 条 → 保留 80104 条
 
 .0.zone
 .000.link
@@ -6233,6 +6233,7 @@
 .aegis-env.com
 .aegisafe.com
 .aegisx.net
+.aegonthtf.com
 .aeink.com
 .aeinsen.com
 .aekyungnb.com
@@ -15212,6 +15213,7 @@
 .cjzzc.com
 .ck0771.com
 .ck100.com
+.ck830.com
 .ck921.com
 .ckair.com
 .ckan.tv
@@ -22234,6 +22236,7 @@
 .eqxiul.com
 .eqxiuzhan.com
 .er07.com
+.er3w.com
 .eraclean.com
 .eraedu.com
 .eral.com
@@ -34648,6 +34651,7 @@
 .hyhro.com
 .hyhscm.com
 .hyht.fun
+.hyhudong.com
 .hyhuo.com
 .hyhxt.net
 .hyhy.cc
@@ -34686,6 +34690,7 @@
 .hyperstrong.com
 .hyplc.com
 .hyppmm.com
+.hyptec.com
 .hyqcw.com
 .hysbz.com
 .hyseim.com
@@ -41836,6 +41841,7 @@
 .ksc-test.com
 .kschuangku.com
 .ksdedu.com
+.ksdyob.store
 .ksecit.com
 .ksedt.com
 .kseibitools.com
@@ -45227,6 +45233,7 @@
 .lygsgt.com
 .lygshjd.com
 .lygshlxh.com
+.lygtylk.com
 .lygxwmarathon.com
 .lygxwxqrmyy.com
 .lygyyjt.com
@@ -46205,6 +46212,7 @@
 .mediastory.cc
 .mediav.com
 .medical-union.com
+.medicalimagecloud.com
 .medicalqc.com
 .medicexam.net
 .mediecogroup.com
@@ -47445,6 +47453,7 @@
 .mojichina.com
 .mojichina.net
 .mojidoc.com
+.mojie.app
 .mojieai.com
 .mojitest.com
 .mojusteel.com
@@ -50019,6 +50028,7 @@
 .nordkete.com
 .nordonfire.com
 .nordritools.com
+.norglo.com
 .norinco-vehicle.com
 .norinco.com
 .norincogroup-ebuy.com
@@ -50405,6 +50415,7 @@
 .oa8000.com
 .oa8858.com
 .oabc.cc
+.oabg.net
 .oachee.com
 .oacrm.com
 .oadz.com
@@ -54148,6 +54159,7 @@
 .queniufr.com
 .queniufw.com
 .queniufz.com
+.queniugm.com
 .queniugslb.com
 .queniugslb.net
 .queniugt.com
@@ -67963,6 +67975,7 @@
 .whjtjt.com
 .whjxbaby.com
 .whjy.net
+.whjyapp.com
 .whjyx.com
 .whjyxh.com
 .whjzxh.com
@@ -71996,6 +72009,7 @@
 .xuegongkong.com
 .xuegui.net
 .xueguoedu.net
+.xuehaiwu.com
 .xuehui.com
 .xuehuile.com
 .xuehuiwang.com
@@ -75252,6 +75266,7 @@
 .yuanpanguoji.com
 .yuanqiao.net
 .yuanqiao.pw
+.yuanqidesk.com
 .yuanqilt.com
 .yuanqingsh.com
 .yuanqisenlin.com
@@ -77710,6 +77725,7 @@
 .zhongguoss.com
 .zhongguoym.com
 .zhonggushipping.com
+.zhonghaiqishengkeji.xyz
 .zhonghaitech.com
 .zhonghaojituan.com
 .zhonghengyiyao.com
