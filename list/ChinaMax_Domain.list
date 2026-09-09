@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-04
-# 生成 2026-09-08 20:32:09 UTC
-# 上游 114189 条 → 保留 80104 条
+# 生成 2026-09-09 20:32:11 UTC
+# 上游 114189 条 → 保留 80110 条
 
 .0.zone
 .000.link
@@ -44712,6 +44712,7 @@
 .lsdfood.com
 .lsdzk.com
 .lserp.com
+.lsfcj.com
 .lsfwpt.com
 .lsfyw.net
 .lsgenius.com
@@ -44950,6 +44951,7 @@
 .luotuobang.net
 .luotuoshop.net
 .luowave.com
+.luoxiang.com
 .luoxiangcheliang.com
 .luoxiaozi.com
 .luoxudong.com
@@ -45400,6 +45402,7 @@
 .lzlhpq.com
 .lzlj.com
 .lzljc.com
+.lzlmyyl.com
 .lzlqc.com
 .lzlrxx.com
 .lzlsl.com
@@ -48224,6 +48227,7 @@
 .mytv365.com
 .mytvgame.com
 .myuclass.com
+.myun.tv
 .myunke.com
 .myusmile.online
 .myvs.download.prss.microsoft.com
@@ -54860,6 +54864,7 @@
 .recodeal.com
 .reconova.com
 .recordpharm.com
+.recuvachina.com
 .recycle366.com
 .red-yellow.net
 .redatoms.com
@@ -65980,6 +65985,7 @@
 .vcinchina.com
 .vckbase.com
 .vclass.com
+.vclbroker.com
 .vcled.com
 .vcloudgtm.com
 .vcltrade.com
