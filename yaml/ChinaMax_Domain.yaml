@@ -1,9 +1,9 @@
 # ChinaMax_Fixed —— 经国内 DNS 实测校验的中国大陆域名集合
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
-# GeoLite2 构建于 2026-09-04
-# 生成 2026-09-09 20:32:11 UTC
-# 上游 114189 条 → 保留 80110 条
+# GeoLite2 构建于 2026-09-08
+# 生成 2026-09-10 20:32:11 UTC
+# 上游 114189 条 → 保留 80117 条
 
 payload:
   - '+.0.zone'
@@ -23563,6 +23563,7 @@ payload:
   - '+.fevermi.com'
   - '+.fevte.com'
   - '+.feydj.com'
+  - '+.feyer-tc.com'
   - '+.ff722fbac1011.beer'
   - '+.ffalcon.com'
   - '+.ffasp.com'
@@ -31205,6 +31206,7 @@ payload:
   - '+.healrna.com'
   - '+.health-china.com'
   - '+.healthan.net'
+  - '+.healthbbs.net'
   - '+.healthcareol.net'
   - '+.healthcareyun.com'
   - '+.healthjd.com'
@@ -41501,6 +41503,7 @@ payload:
   - '+.kjjxjy.com'
   - '+.kjkd.com'
   - '+.kjkp.com'
+  - '+.kjks.net'
   - '+.kjlww.com'
   - '+.kjmti.com'
   - '+.kjr365.com'
@@ -51939,6 +51942,7 @@ payload:
   - '+.pingpangwang.com'
   - '+.pingplusplus.com'
   - '+.pingpongx.com'
+  - '+.pingshuocoal.com'
   - '+.pinguan.com'
   - '+.pingwest.com'
   - '+.pingxiaow.com'
@@ -53982,6 +53986,7 @@ payload:
   - '+.qskretkf.com'
   - '+.qsl.pub'
   - '+.qsmutual.com'
+  - '+.qsnctf.com'
   - '+.qsnovel.com'
   - '+.qspfw.com'
   - '+.qss-lb.com'
@@ -70556,6 +70561,7 @@ payload:
   - '+.xiaositv.com'
   - '+.xiaot.com'
   - '+.xiaota.com'
+  - '+.xiaotangketang.com'
   - '+.xiaote.com'
   - '+.xiaote.net'
   - '+.xiaotengyouxi.com'
@@ -80068,6 +80074,7 @@ payload:
   - 'ksn-info.geoksn.kaspersky.com'
   - 'ksn-kas.geoksn.kaspersky.com'
   - 'ksn-mdr.geoksn.kaspersky.com'
+  - 'ksn-tcert.geoksn.kaspersky.com'
   - 'ksn-url.geoksn.kaspersky.com'
   - 'ksn-verdict.geoksn.kaspersky.com'
   - 'lmt.scqstv.com'
