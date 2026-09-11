@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-08
-# 生成 2026-09-10 20:32:11 UTC
-# 上游 114189 条 → 保留 80117 条
+# 生成 2026-09-11 20:32:12 UTC
+# 上游 114189 条 → 保留 80121 条
 
 payload:
   - '+.0.zone'
@@ -2081,6 +2081,7 @@ payload:
   - '+.2zzt.com'
   - '+.3-3.me'
   - '+.3-hospital-cqmu.com'
+  - '+.3.biz'
   - '+.3.cn'
   - '+.30.net'
   - '+.300.cn'
@@ -19814,6 +19815,7 @@ payload:
   - '+.dishu3.com'
   - '+.dishuizhijia.com'
   - '+.disimy.com'
+  - '+.dislux.com'
   - '+.dismall.com'
   - '+.distantmeaning.com'
   - '+.distinctclinic.com'
@@ -56845,6 +56847,7 @@ payload:
   - '+.sdxszs.com'
   - '+.sdxtsz.com'
   - '+.sdxtxh.com'
+  - '+.sdxvisa.com'
   - '+.sdxwyy.net'
   - '+.sdxzt.com'
   - '+.sdyanbao.com'
@@ -75204,6 +75207,7 @@ payload:
   - '+.ytphq.com'
   - '+.ytport.com'
   - '+.ytpowder.com'
+  - '+.ytpu.com'
   - '+.ytqh-electric.com'
   - '+.ytrlzyw.com'
   - '+.ytrmtzx.com'
