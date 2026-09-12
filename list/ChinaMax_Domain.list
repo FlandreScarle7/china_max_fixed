@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-08
-# 生成 2026-09-11 20:32:12 UTC
-# 上游 114189 条 → 保留 80121 条
+# 生成 2026-09-12 20:32:09 UTC
+# 上游 114189 条 → 保留 80123 条
 
 .0.zone
 .000.link
@@ -18250,6 +18250,7 @@
 .d2core.com
 .d2film.com
 .d2kdi2ss.com
+.d2scdn.com
 .d2shost.com
 .d2ty.com
 .d2ziran.com
@@ -59442,6 +59443,7 @@
 .sjwyx.com
 .sjxtcw.com
 .sjxydc.com
+.sjxzc.com
 .sjy2.com
 .sjyhotel.com
 .sjyl.com
