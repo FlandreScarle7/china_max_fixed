@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-08
-# 生成 2026-09-12 20:32:09 UTC
-# 上游 114189 条 → 保留 80123 条
+# 生成 2026-09-13 20:32:06 UTC
+# 上游 114188 条 → 保留 80128 条
 
 .0.zone
 .000.link
@@ -16627,6 +16627,7 @@
 .courage-magnet.com
 .cousz-gd.com
 .covcec.com
+.coverweb.cc
 .covinda.com
 .covoart.com
 .covtv.com
@@ -34591,6 +34592,7 @@
 .hxwglm.com
 .hxx.net
 .hxxkw.org
+.hxxl6.com
 .hxyd.cc
 .hxydup.com
 .hxyjw.com
@@ -68481,6 +68483,7 @@
 .wl890.com
 .wlaforum.com
 .wlai.vip
+.wlaiy.com
 .wlanbanlv.com
 .wlcbw.com
 .wldmarket.com
@@ -71149,6 +71152,7 @@
 .xinxifabu.net
 .xinxing-marathon.com
 .xinxing001.com
+.xinxing100.com
 .xinxing91.com
 .xinxinhotel.com
 .xinxinjoy.com
@@ -80038,6 +80042,7 @@
 .zzzzaaaa.com
 2mdn-cn.net
 account-cn.alibabacloud.com
+activate.activation-v2.kaspersky.com
 admob-cn.com
 ads3-normal-hl.zijieapi.com
 ads3-normal.zijieapi.com
