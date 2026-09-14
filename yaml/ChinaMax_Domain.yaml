@@ -1,9 +1,9 @@
 # ChinaMax_Fixed —— 经国内 DNS 实测校验的中国大陆域名集合
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
-# GeoLite2 构建于 2026-09-08
-# 生成 2026-09-13 20:32:06 UTC
-# 上游 114188 条 → 保留 80128 条
+# GeoLite2 构建于 2026-09-11
+# 生成 2026-09-14 20:32:09 UTC
+# 上游 114189 条 → 保留 80136 条
 
 payload:
   - '+.0.zone'
@@ -15195,6 +15195,7 @@ payload:
   - '+.cjspd.com'
   - '+.cjsy.net'
   - '+.cjsyedu.com'
+  - '+.cjtl.com'
   - '+.cjtmsp.com'
   - '+.cjtouzi.com'
   - '+.cjveg.com'
@@ -48347,6 +48348,7 @@ payload:
   - '+.naiwch.com'
   - '+.naixuecha.com'
   - '+.naiyouxuexi.com'
+  - '+.najiahy.com'
   - '+.najingtech.com'
   - '+.najyj.net'
   - '+.nakedsail.com'
@@ -52640,6 +52642,7 @@ payload:
   - '+.puxindesign.com'
   - '+.puxun.co'
   - '+.puyasemi.com'
+  - '+.puyimed.com'
   - '+.puyuan-electric.com'
   - '+.puzzle8.com'
   - '+.puzzles100.com'
@@ -54191,6 +54194,7 @@ payload:
   - '+.queniuit.com'
   - '+.queniuiy.com'
   - '+.queniuja.com'
+  - '+.queniujd.com'
   - '+.queniujf.com'
   - '+.queniujg.com'
   - '+.queniujq.com'
@@ -61415,6 +61419,7 @@ payload:
   - '+.sxuyr2nx.com'
   - '+.sxvtc.com'
   - '+.sxwbedu.com'
+  - '+.sxwbs.com'
   - '+.sxwetalent.com'
   - '+.sxworker.com'
   - '+.sxwq.com'
@@ -68582,6 +68587,7 @@ payload:
   - '+.wmxue.com'
   - '+.wmxxgy.com'
   - '+.wmxxgz.com'
+  - '+.wmxxwh.com'
   - '+.wmxxxj.com'
   - '+.wmy-ad.com'
   - '+.wmyqdmm.com'
@@ -77350,6 +77356,7 @@ payload:
   - '+.zhenxipin.net'
   - '+.zhenyangshoes.com'
   - '+.zhenye.com'
+  - '+.zhenyuansoft.com'
   - '+.zhenyunpan.com'
   - '+.zhenzhuchanfu.com'
   - '+.zheshenet.com'
@@ -80044,6 +80051,7 @@ payload:
   - '2mdn-cn.net'
   - 'account-cn.alibabacloud.com'
   - 'activate.activation-v2.kaspersky.com'
+  - 'activation-v2.kaspersky.com'
   - 'admob-cn.com'
   - 'ads3-normal-hl.zijieapi.com'
   - 'ads3-normal.zijieapi.com'
