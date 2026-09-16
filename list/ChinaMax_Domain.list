@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-11
-# 生成 2026-09-15 20:32:06 UTC
-# 上游 114189 条 → 保留 80140 条
+# 生成 2026-09-16 20:32:10 UTC
+# 上游 114189 条 → 保留 80152 条
 
 .0.zone
 .000.link
@@ -6103,6 +6103,7 @@
 .adcotechina.com
 .addaad.com
 .addchina.com
+.addimmar168.com
 .addnewer.com
 .addog.vip
 .addoom.com
@@ -7971,6 +7972,7 @@
 .arrowwardrobe.com
 .ars-china.com
 .arshow.com
+.arswp.com
 .art-ba-ba.com
 .art-child.com
 .art-coding.com
@@ -10714,6 +10716,7 @@
 .blendercn.org
 .blessedbin.com
 .blestech.com
+.blgxhn.com
 .blhdazhe.com
 .bliao.com
 .blibao.com
@@ -17237,6 +17240,7 @@
 .cqyingang.com
 .cqyisen.com
 .cqyixiao.com
+.cqyljgxx.com
 .cqym120.com
 .cqynzz.com
 .cqyongfeng.com
@@ -19178,6 +19182,7 @@
 .denachina.com
 .denaircompressor.com
 .deng88.com
+.dengbaogonggao.com
 .dengdingsheng.com
 .denghaoxuan.com
 .denghuo.com
@@ -29648,6 +29653,7 @@
 .gzrandr.com
 .gzrch.com
 .gzrecruit.com
+.gzredpine.com
 .gzrh.com
 .gzrishun.com
 .gzrkt.com
@@ -33509,6 +33515,7 @@
 .htxxpx.com
 .htxy.net
 .htycs.com
+.htyduck.com
 .htyhm.com
 .htyou.com
 .htyswzzgw.com
@@ -36572,6 +36579,7 @@
 .ipyy.com
 .iq.com
 .iq33.com
+.iqalliance.org
 .iqbxq.com
 .iqcrj.com
 .iqdedu.com
@@ -44183,6 +44191,7 @@
 .lizhifilm.com
 .lizhifm.com
 .lizhiinc.com
+.lizhilive.com
 .lizhiqi.com
 .lizhiqiang.name
 .lizhiqp.com
@@ -53411,6 +53420,7 @@
 .qiminzi.com
 .qimodesign.com
 .qimu86.com
+.qimyu.com
 .qinbei.com
 .qinbing.com
 .qincaigame.com
@@ -65641,6 +65651,7 @@
 .uos56.com
 .uostools.com
 .uouin.com
+.uovz.com
 .up-et.com
 .up-pharma.com
 .up135.com
@@ -73715,6 +73726,7 @@
 .yileyiqi.com
 .yileyoo.com
 .yileyunssp.com
+.yili.com
 .yilianapp.com
 .yilianmeiti.com
 .yilianyixue.com
