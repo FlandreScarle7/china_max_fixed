@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-11
-# 生成 2026-09-16 20:32:10 UTC
-# 上游 114189 条 → 保留 80152 条
+# 生成 2026-09-17 20:32:11 UTC
+# 上游 114189 条 → 保留 80156 条
 
 payload:
   - '+.0.zone'
@@ -29375,6 +29375,7 @@ payload:
   - '+.gzasp.net'
   - '+.gzate.com'
   - '+.gzautojet.com'
+  - '+.gzbaozhilin.com'
   - '+.gzbawei.com'
   - '+.gzbeaton.com'
   - '+.gzbic.com'
@@ -35576,6 +35577,7 @@ payload:
   - '+.idataway.com'
   - '+.idatawz.com'
   - '+.idazhe.net'
+  - '+.idbhost.com'
   - '+.idc002.com'
   - '+.idc021.com'
   - '+.idc029.com'
@@ -55542,6 +55544,7 @@ payload:
   - '+.rt-thread.com'
   - '+.rt-thread.org'
   - '+.rtacdn-os.com'
+  - '+.rtahengtai.com'
   - '+.rtbasia.com'
   - '+.rtbpb.com'
   - '+.rtbtmc.com'
@@ -69587,6 +69590,7 @@ payload:
   - '+.wzofjt.com'
   - '+.wzojk.com'
   - '+.wzoka.com'
+  - '+.wzotai.com'
   - '+.wzpcw.com'
   - '+.wzpkus.com'
   - '+.wzplc.com'
