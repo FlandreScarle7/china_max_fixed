@@ -1,9 +1,9 @@
 # ChinaMax_Fixed —— 经国内 DNS 实测校验的中国大陆域名集合
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
-# GeoLite2 构建于 2026-09-11
-# 生成 2026-09-17 20:32:11 UTC
-# 上游 114189 条 → 保留 80156 条
+# GeoLite2 构建于 2026-09-18
+# 生成 2026-09-18 20:32:15 UTC
+# 上游 114189 条 → 保留 80161 条
 
 .0.zone
 .000.link
@@ -8036,6 +8036,7 @@
 .aschtj.com
 .asczwa.com
 .asczxcefsv.com
+.asd.red
 .asd868.com
 .asdeshan.com
 .asdf-bj.net
@@ -44813,6 +44814,7 @@
 .ltpower.net
 .ltsbbs.com
 .ltsc.vip
+.ltsf.com
 .ltsj2005.com
 .ltski.com
 .lttmgc.com
@@ -46217,6 +46219,7 @@
 .meb.com
 .mebhaoya.com
 .mebo.com
+.mebtf.com
 .mechatim.com
 .mechr.com
 .mechrevo.com
@@ -50422,6 +50425,7 @@
 .nzygyt.com
 .o-hr.com
 .o-netcom.com
+.o-star.cc
 .o0310o.com
 .o0o0w.com
 .o163.com
@@ -65355,6 +65359,7 @@
 .udid.vin
 .udows.com
 .udream.com
+.udsdown.xyz
 .udship.com
 .udxd.com
 .uebilling.com
