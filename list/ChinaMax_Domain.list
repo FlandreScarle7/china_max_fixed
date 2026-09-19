@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-18
-# 生成 2026-09-18 20:32:15 UTC
-# 上游 114189 条 → 保留 80161 条
+# 生成 2026-09-19 20:32:11 UTC
+# 上游 114189 条 → 保留 80167 条
 
 .0.zone
 .000.link
@@ -1465,6 +1465,7 @@
 .18q.co
 .18qh.com
 .18qiang.com
+.18qingqu.com
 .18touch.com
 .18zp.com
 .18zw.com
@@ -27322,6 +27323,7 @@
 .guangxishangfu.com
 .guangxishuizhiyangzhigongsi.com
 .guangxisichujiadao.com
+.guangxixinchan.com
 .guangxixinyan.com
 .guangxiyijie.com
 .guangxizbq.com
@@ -34317,6 +34319,7 @@
 .huobanhuyu.com
 .huobaowang.com
 .huobaoyx.com
+.huobi.io
 .huocai.com
 .huochai.mobi
 .huoche.com
@@ -42988,6 +42991,7 @@
 .leaferjs.com
 .leaftools.net
 .leafword.com
+.leagcard.com
 .leagsoft.com
 .leaguesun.com
 .leakeyun.com
@@ -73855,6 +73859,7 @@
 .yingmi.com
 .yingming.net
 .yingnor.com
+.yingpaigame.com
 .yingpaikeji.com
 .yingpost.com
 .yingriliuti.com
@@ -77199,6 +77204,7 @@
 .zhaopianzhibo.com
 .zhaopin.cn
 .zhaopin.com
+.zhaopin400.com
 .zhaopin668.com
 .zhaoqiufa.com
 .zhaoqt.net
