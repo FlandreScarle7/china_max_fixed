@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-18
-# 生成 2026-09-19 20:32:11 UTC
-# 上游 114189 条 → 保留 80167 条
+# 生成 2026-09-20 20:32:14 UTC
+# 上游 114240 条 → 保留 80220 条
 
 .0.zone
 .000.link
@@ -5258,6 +5258,7 @@
 .91fangan.com
 .91fengwan.com
 .91fifa.com
+.91fyt.com
 .91game.com
 .91goodschool.com
 .91haigui.com
@@ -6430,6 +6431,7 @@
 .ahmwgroup.com
 .ahnanfang.com
 .ahnec.com
+.ahnews.com.cn
 .ahnluh.com
 .ahnmc.com
 .ahno-tool.com
@@ -11785,6 +11787,7 @@
 .cadict.net
 .cadrolift.com
 .cadzxw.com
+.cae.cn
 .caeerr.com
 .caefa.org
 .caeri-te.com
@@ -12098,6 +12101,7 @@
 .carzd.com
 .carzenplus.com
 .carzyuncle.com
+.cas.cn
 .cas01.com
 .casarte.com
 .casbin.com
@@ -12385,6 +12389,7 @@
 .ccmn.net
 .ccmodel.com
 .ccmw.net
+.ccn.com.cn
 .ccn.ren
 .ccn360.com
 .ccnbdh.com
@@ -13014,6 +13019,8 @@
 .cfhi.com
 .cfhuodong.cc
 .cfhuodong.com
+.cfi.cn
+.cfi.net.cn
 .cfiec.net
 .cfjzyxh.com
 .cfkjgx.com
@@ -13031,6 +13038,7 @@
 .cfscrm.com
 .cfsggjt.com
 .cfsino.com
+.cfsn.cn
 .cfss.cc
 .cfsuper.com
 .cftcredit.com
@@ -13883,8 +13891,11 @@
 .china-zjj.net
 .china-zrg.com
 .china-zysj.com
+.china.cn
 .china.com
+.china.com.cn
 .china.mintel.com
+.china.org.cn
 .china001.com
 .china12345.net
 .china12365.com
@@ -15731,6 +15742,7 @@
 .cncn.net
 .cncncn.com
 .cncnet.net
+.cncnimg.cn
 .cncolour.com
 .cncompute.com
 .cncosmic.com
@@ -15802,6 +15814,7 @@
 .cneln.net
 .cnemb.com
 .cnena.com
+.cneo.com.cn
 .cneol-dns.net
 .cneonl.com
 .cnepaper.com
@@ -19877,6 +19890,7 @@
 .diynova.com
 .diyring.cc
 .dizalpharma.com
+.dizh.net
 .dizhimei.com
 .dizzylab.net
 .dj-dj.net
@@ -22597,6 +22611,7 @@
 .ewinshocks.com
 .ewoka.com
 .ewomail.com
+.eword.cn
 .eworksglobal.com
 .eworldship.com
 .ewpeinfo.com
@@ -23672,6 +23687,7 @@
 .findic.kr
 .findic.tw
 .findic.us
+.findlaw.cn
 .findlawimg.com
 .findlinked.com
 .findmyrepair.com
@@ -24996,6 +25012,7 @@
 .gamed9.com
 .gamedachen.com
 .gamediary.cn
+.gamedog.cn
 .gameducky.com
 .gameegg.com
 .gamefeile.com
@@ -25123,6 +25140,7 @@
 .gaojima.com
 .gaojitui.com
 .gaojiua.com
+.gaokao.cn
 .gaokao.com
 .gaokao789.com
 .gaokaobaoming.com
@@ -26682,6 +26700,8 @@
 .gongkongsaas.com
 .gonglf.com
 .gonglve.net
+.gongniu.cn
+.gongniukaiguan.net
 .gongpin.net
 .gongshang120.com
 .gongshiku.com
@@ -32585,6 +32605,7 @@
 .hnqnw.com
 .hnquxing.com
 .hnqz.net
+.hnr.cn
 .hnradio.com
 .hnrcjl.com
 .hnrcjob.com
@@ -34285,6 +34306,7 @@
 .hunaniptv.com
 .hunanjz.com
 .hunanpea.com
+.hunantoday.cn
 .hunantv.com
 .hunanxingxin.com
 .hunanyuneng.com
@@ -35200,6 +35222,7 @@
 .i3vsoft.com
 .i3yuan.com
 .i3z.cc
+.i4.cn
 .i4px.com
 .i4t.com
 .i51game.com
@@ -38305,6 +38328,7 @@
 .jingjiayl.com
 .jingjie360.com
 .jingjiezhileng.com
+.jingjiribao.cn
 .jingjitech.com
 .jingjiu.com
 .jingju.com
@@ -38369,6 +38393,7 @@
 .jingxi.net
 .jingxiang.work
 .jingxianglawfirm.com
+.jingxiaoling.com
 .jingxinclass.com
 .jingyangzhijia.com
 .jingyeco.com
@@ -41564,6 +41589,7 @@
 .kkh-global.com
 .kkhaitao.com
 .kkidc.com
+.kkj.cn
 .kkj2.com
 .kkjiaofei.com
 .kkjishu.com
@@ -43639,6 +43665,7 @@
 .lifetmt.org
 .lifeup.vip
 .lifevc.com
+.lifeweek.com.cn
 .lifexue.com
 .lifeyk.com
 .lifezb.com
@@ -44966,6 +44993,7 @@
 .luomor.com
 .luoniushan.com
 .luoo.net
+.luoohu.com
 .luopan.com
 .luori.net
 .luoshendao.com
@@ -46182,6 +46210,7 @@
 .md5ma.com
 .mdbimg.com
 .mdcdn.cn
+.mddclass.com
 .mdddg.com
 .mddj.com
 .mddlsa.com
@@ -46258,6 +46287,7 @@
 .medlander.com
 .medlinker.com
 .medlinker.net
+.medlive.cn
 .medme.net
 .medmeeting.org
 .mednovogroup.com
@@ -48824,6 +48854,7 @@
 .net767.com
 .netat.net
 .netbian.com
+.netbig.top
 .netbooo.com
 .netchina100.com
 .netcoc.com
@@ -51494,6 +51525,7 @@
 .paynews.net
 .pbaohzc.com
 .pbcan.com
+.pbccrc.org.cn
 .pbcft.com
 .pbchizhou.com
 .pbdpw.com
@@ -51623,6 +51655,7 @@
 .peccn.com
 .pechoin.com
 .pecmgd.com
+.pedaily.cn
 .pediatrixtherapeutics.com
 .pediy.com
 .pedli.com
@@ -54146,6 +54179,7 @@
 .qudaiji.com
 .qudaowuyou.com
 .qudayun.com
+.qudian.com
 .qudingshui.com
 .qudong.com
 .qudong9.com
@@ -54678,6 +54712,7 @@
 .radar-ev.com
 .radiate-electronics.com
 .radida.com
+.radio.cn
 .radio1964.com
 .radissoncollection-wuxi.com
 .rafflesmedicalchina.com
@@ -56334,6 +56369,7 @@
 .sciencechina.cn
 .sciencecity.net
 .sciencehr.net
+.sciencenet.cn
 .sciencep.com
 .sciengine.com
 .scienjus.com
@@ -56541,6 +56577,7 @@
 .sda.cn
 .sdacid.com
 .sdailong.com
+.sdaofu.com
 .sdapo.net
 .sdazgs.com
 .sdbao.com
@@ -60176,6 +60213,7 @@
 .souidc.com
 .souidc.org
 .soukecheng.net
+.soulapp.cn
 .soulgame.mobi
 .soulsky.net
 .soulteary.com
@@ -62396,6 +62434,7 @@
 .t2cn.com
 .t2uu.com
 .t3315.com
+.t3go.cn
 .t3j4.com
 .t3yanzheng.com
 .t528.com
@@ -65296,6 +65335,7 @@
 .uboat100.com
 .uborn.net
 .uboxol.com
+.uboxs.com
 .ubs001.com
 .ubssdic.com
 .ubtrobot.com
@@ -66601,6 +66641,7 @@
 .vwwmsd.com
 .vx56.com
 .vxe.com
+.vxhcm.com
 .vxia.net
 .vxiaocheng.com
 .vxinyou.com
@@ -67739,6 +67780,7 @@
 .weshineapp.com
 .wesingapp.com
 .west-motion.com
+.west.cn
 .west.xyz
 .west263.com
 .west95582.com
@@ -68497,6 +68539,7 @@
 .wkbins.com
 .wkbrowser.com
 .wkdty.com
+.wkepu.cn
 .wkepu.com
 .wkimg.com
 .wkmic.com
@@ -68657,6 +68700,7 @@
 .wnzc.com
 .wnzctc.com
 .wnzy.net
+.wo-adv.cn
 .wo-smart.com
 .wo.cc
 .wo.cn
@@ -71512,6 +71556,7 @@
 .xlbsoft.com
 .xlcjzx.com
 .xlctyd.com
+.xlcx.cn
 .xlczg.com
 .xldlive.com
 .xldz.com
@@ -74077,6 +74122,7 @@
 .yitaihdbf.com
 .yitanyun.com
 .yitao.com
+.yitaopu.com
 .yitb.com
 .yitcollege.com
 .yiteholdings.com
@@ -74713,6 +74759,7 @@
 .youban.com
 .youbangkeyi.com
 .youbangyun.com
+.youbianku.com
 .youbibi.com
 .youbikecn.com
 .youbohe.com
@@ -74897,6 +74944,7 @@
 .youtaidoors.com
 .youtaidu.com
 .youtaojd.com
+.youth.cn
 .youtianli.com
 .youtianmetal.com
 .youtianz.com
@@ -77392,6 +77440,7 @@
 .zheshenet.com
 .zheshouka.com
 .zhetao.com
+.zhetian.org
 .zhetouniu.com
 .zheurl.com
 .zhexingzx.com
@@ -77831,6 +77880,7 @@
 .zhonglianhuashu.com
 .zhonglianhuaxin.com
 .zhonglianyx.com
+.zhongliujie.com
 .zhongliusp.com
 .zhonglue-consulting.com
 .zhonglun.com
@@ -79089,6 +79139,7 @@
 .zmjm.com
 .zmmek.com
 .zmmio.com
+.zmn.cn
 .zmndjm.com
 .zmnedu.com
 .zmnh.com
@@ -79449,6 +79500,7 @@
 .zsytit.com
 .zsywang.com
 .zsyyart.com
+.zsyyb.cn
 .zszk.net
 .zsznz.com
 .zszq.com
@@ -79598,6 +79650,7 @@
 .zuitang.com
 .zuitu.com
 .zuixu.com
+.zuiyou.tv
 .zuiyouxi.com
 .zuizhifu.com
 .zuji360.com
