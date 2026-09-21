@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-18
-# 生成 2026-09-20 20:32:14 UTC
-# 上游 114240 条 → 保留 80220 条
+# 生成 2026-09-21 20:32:29 UTC
+# 上游 114240 条 → 保留 80228 条
 
 .0.zone
 .000.link
@@ -1429,6 +1429,7 @@
 .187997.com
 .188.com
 .188.net
+.188.vip
 .18837331771.com
 .18856.com
 .188bio.com
@@ -2688,6 +2689,7 @@
 .3jidi.com
 .3jlm.com
 .3jzh.com
+.3k.com
 .3k3cn.com
 .3kid.com
 .3kjs.com
@@ -21859,6 +21861,7 @@
 .ehualu.com
 .ehuatai.com
 .ehuataifund.com
+.ehuijing.com
 .ehuoke.com
 .ehuoyan.com
 .ehuoyun.com
@@ -33483,6 +33486,7 @@
 .htgjjl.com
 .htgkdz.com
 .htguosheng.com
+.htgwf.com
 .htidc.com
 .htinfor.com
 .htinnsjm.com
@@ -45853,6 +45857,7 @@
 .mangzhongbrand.com
 .mangzx.com
 .manhinggroup.com
+.manhua365.com
 .manhualang.com
 .manhuang.org
 .manhuaren.com
@@ -66098,6 +66103,7 @@
 .vecentek.com
 .veckinc.com
 .vecrp.com
+.vector-engine.com
 .vectorplaces.com
 .vedamobi.com
 .vedeng.com
@@ -72258,6 +72264,7 @@
 .xunicard.com
 .xuniquan.com
 .xunjiecad.com
+.xunjiefanyi.com
 .xunjiepdf.com
 .xunjieshipin.com
 .xunjietupian.com
@@ -80168,6 +80175,7 @@ gstatic-cn.com
 gtm.oasisfeng.com
 i.pki.goog
 izattime.qcomgeo2.com
+ksn-cinfo.geoksn.kaspersky.com
 ksn-crypto-wifiplus.geoksn.kaspersky.com
 ksn-dc1-cert.geoksn.kaspersky.com
 ksn-dc1-file.geoksn.kaspersky.com
