@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-18
-# 生成 2026-09-21 20:32:29 UTC
-# 上游 114240 条 → 保留 80228 条
+# 生成 2026-09-22 20:32:11 UTC
+# 上游 114241 条 → 保留 80236 条
 
 payload:
   - '+.0.zone'
@@ -202,6 +202,7 @@ payload:
   - '+.02wan.com'
   - '+.02wq.com'
   - '+.0310it.com'
+  - '+.0311.cc'
   - '+.031130.xyz'
   - '+.03118888.com'
   - '+.0311hd.com'
@@ -30931,6 +30932,7 @@ payload:
   - '+.hbpx.net'
   - '+.hbqcxy.com'
   - '+.hbqingteng.com'
+  - '+.hbqmys.com'
   - '+.hbqndc.com'
   - '+.hbqtgg.com'
   - '+.hbqydz.com'
@@ -36455,6 +36457,7 @@ payload:
   - '+.inxedu.com'
   - '+.inxni.com'
   - '+.inxunoffice.com'
+  - '+.inzone-auto.com'
   - '+.inzotek.com'
   - '+.iofange.com'
   - '+.ioffershow.com'
@@ -38331,6 +38334,7 @@ payload:
   - '+.jingjiang.com'
   - '+.jingjiasc.com'
   - '+.jingjiayl.com'
+  - '+.jingjidaokan.com'
   - '+.jingjie360.com'
   - '+.jingjiezhileng.com'
   - '+.jingjiribao.cn'
@@ -55218,6 +55222,7 @@ payload:
   - '+.rim20.com'
   - '+.ringpu.com'
   - '+.rinlink.com'
+  - '+.rioalc.com'
   - '+.rippletek.com'
   - '+.riscv-dev.tech'
   - '+.riscv-mcu.com'
@@ -59471,6 +59476,7 @@ payload:
   - '+.sjetdz.com'
   - '+.sjez.com'
   - '+.sjfh168.com'
+  - '+.sjfls6.com'
   - '+.sjfpro.com'
   - '+.sjfzxm.com'
   - '+.sjgle.com'
@@ -71604,6 +71610,7 @@ payload:
   - '+.xlsdn.com'
   - '+.xlsemi.com'
   - '+.xlshou.com'
+  - '+.xlsxmj.com'
   - '+.xltll.com'
   - '+.xltnjslfd.com'
   - '+.xlxkgjt.com'
@@ -79657,6 +79664,7 @@ payload:
   - '+.zuishidai.com'
   - '+.zuitang.com'
   - '+.zuitu.com'
+  - '+.zuixiaoyao.com'
   - '+.zuixu.com'
   - '+.zuiyou.tv'
   - '+.zuiyouxi.com'
