@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-18
-# 生成 2026-09-22 20:32:11 UTC
-# 上游 114241 条 → 保留 80236 条
+# 生成 2026-09-23 20:32:13 UTC
+# 上游 114241 条 → 保留 80242 条
 
 payload:
   - '+.0.zone'
@@ -11133,6 +11133,7 @@ payload:
   - '+.bowu66.com'
   - '+.box-anchor.com'
   - '+.box3.fun'
+  - '+.boxiaole.com'
   - '+.boxisign.com'
   - '+.boxuegu.com'
   - '+.boxueio.com'
@@ -24812,6 +24813,7 @@ payload:
   - '+.fyddjys.com'
   - '+.fydeos.com'
   - '+.fydvtu.com'
+  - '+.fyeds0.com'
   - '+.fyedu.net'
   - '+.fyeedu.net'
   - '+.fyfch.com'
@@ -27499,6 +27501,7 @@ payload:
   - '+.guiyuhuanbao.com'
   - '+.guiyuntai.com'
   - '+.guizeco.com'
+  - '+.guizhenghe.com'
   - '+.guizhougames.com'
   - '+.guizhougas.com'
   - '+.guizhoushengyang.com'
@@ -31986,6 +31989,7 @@ payload:
   - '+.hicsharp.com'
   - '+.hicustom.com'
   - '+.hiczp.com'
+  - '+.hid98ys.com'
   - '+.hidery.com'
   - '+.hidesigncloud.com'
   - '+.hiditie.com'
@@ -42370,6 +42374,7 @@ payload:
   - '+.kykjgroup.com'
   - '+.kyleduo.com'
   - '+.kylin-os.com'
+  - '+.kylinlot.com'
   - '+.kylinmobi.com'
   - '+.kylinpet.com'
   - '+.kylpharm.com'
@@ -60767,6 +60772,7 @@ payload:
   - '+.stpos.net'
   - '+.str-mo.com'
   - '+.stray-soul.com'
+  - '+.streamax.com'
   - '+.streamaxtech.com'
   - '+.streamcomputing.com'
   - '+.streamlake.com'
