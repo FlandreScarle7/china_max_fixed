@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-18
-# 生成 2026-09-23 20:32:13 UTC
-# 上游 114241 条 → 保留 80242 条
+# 生成 2026-09-24 20:32:12 UTC
+# 上游 114241 条 → 保留 80250 条
 
 .0.zone
 .000.link
@@ -10178,6 +10178,7 @@
 .biyao.com
 .biyehome.net
 .biyelunwenjiance.com
+.biyequna.com
 .biyezheng8.com
 .biyidc.com
 .biyingniao.com
@@ -17870,6 +17871,7 @@
 .cumulon.com
 .cunan.com
 .cuncc.cc
+.cunchuhulian-ln.cn
 .cunfang.com
 .cunliangtech.com
 .cunnar.com
@@ -34857,6 +34859,7 @@
 .hzchgj.com
 .hzcjtz.com
 .hzcmc.com
+.hzcmdq.com
 .hzcnc.com
 .hzcopyright.com
 .hzctjs.com
@@ -36360,6 +36363,7 @@
 .innolcon.com
 .innomd.org
 .innomddesign.com
+.innopack97.com
 .innopro.cc
 .innoscience.com
 .innosystemtech.com
@@ -38541,6 +38545,7 @@
 .jinruimedical.com
 .jinrunsoft.com
 .jins-cn.com
+.jinse.com
 .jinsebook.com
 .jinsehuaqin.com
 .jinsha120.com
@@ -45675,6 +45680,7 @@
 .magictavern.com
 .magicw3.com
 .magicwinmail.com
+.magma.ink
 .magnotel.com
 .magook.com
 .magvision.com
@@ -49181,6 +49187,7 @@
 .nimitzvac.com
 .nindeli.com
 .nine-rivers.com
+.ninebot-link.com
 .ninebot.com
 .nineplaying.com
 .ninestargroup.com
@@ -77066,6 +77073,7 @@
 .zgtaining.com
 .zgtcyswh.com
 .zgtianlong.com
+.zgtjqxh.com
 .zgtnzx.com
 .zgtop10.com
 .zgty188.com
