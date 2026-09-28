@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-25
-# 生成 2026-09-27 20:32:15 UTC
-# 上游 114483 条 → 保留 80530 条
+# 生成 2026-09-28 20:32:14 UTC
+# 上游 114433 条 → 保留 80531 条
 
 .0.zone
 .000.link
@@ -264,7 +264,6 @@
 .0472.com
 .0476vip.com
 .04adca98c1022.beer
-.04ip.com
 .0507c.xin
 .0510gcw.com
 .0510gtgc.com
@@ -3223,6 +3222,7 @@
 .51dzt.com
 .51dzw.com
 .51ean.com
+.51ean.xin
 .51easymaster.com
 .51eb0685c11021.beer
 .51ebo.com
@@ -5435,7 +5435,6 @@
 .93land.com
 .93lh.com
 .93njf0.com
-.93pk.com
 .93sdk.com
 .93sem.com
 .93soso.com
@@ -5574,6 +5573,7 @@
 .96xz.com
 .96yx.com
 .96zxue.com
+.97.cc
 .970mhz.com
 .9718.com
 .9718game.com
@@ -6037,7 +6037,6 @@
 .acelamicro.com
 .aceoo.com
 .acepanel.net
-.acesheep.com
 .acetar.com
 .acewill.net
 .acfechina.org
@@ -30673,6 +30672,7 @@
 .haosou.net
 .haosou123.com
 .haost.com
+.haosulu.com
 .haotgame.com
 .haotm.com
 .haotougao.com
@@ -34741,6 +34741,7 @@
 .hxqc.mobi
 .hxqcgf.com
 .hxqcjt.com
+.hxqgczx.com
 .hxr100.com
 .hxrc.com
 .hxsd.com
@@ -41413,7 +41414,6 @@
 .kenuonet.com
 .kenxon.com
 .kenzochina.com
-.keoaeic.org
 .keovo.net
 .kepuchina.cn
 .kepusky.com
@@ -44700,6 +44700,7 @@
 .longhorn-auto.com
 .longhua.net
 .longhuafilm.com
+.longhufengyun.com
 .longhuiren.com
 .longhuquan.com
 .longhuvip.com
@@ -50081,7 +50082,6 @@
 .nnkailong.com
 .nnkcy.com
 .nnkeerlab.com
-.nnkeruan.com
 .nnkeyuan.com
 .nnkhjq.com
 .nnkj77.com
@@ -50120,6 +50120,7 @@
 .nnqh.net
 .nnqianfan.com
 .nnqmjy.com
+.nnqsk.com
 .nnrbsoa.com
 .nnrc.net
 .nnrig.com
@@ -50844,7 +50845,6 @@
 .ok096.com
 .ok123.com
 .ok126.net
-.ok1616.com
 .ok165.com
 .ok183.com
 .ok3w.net
@@ -54663,7 +54663,6 @@
 .qutingting.com
 .qutoutiao.net
 .qutu.com
-.qutuancan.com
 .quumii.com
 .quvisa.com
 .quwan.com
@@ -60439,6 +60438,7 @@
 .soukecheng.net
 .soulapp.cn
 .soulgame.mobi
+.soulharbor.work
 .soulsky.net
 .soulteary.com
 .sound-force.com
@@ -61634,6 +61634,7 @@
 .sxjky.com
 .sxjntech.com
 .sxjtyhjt.com
+.sxjwlkj.com
 .sxjybk.com
 .sxjyxh.com
 .sxjzxww.com
@@ -63169,7 +63170,6 @@
 .td98.com
 .tdasz.com
 .tdataspace.com
-.tdchats.us
 .tdgod.com
 .tdict.com
 .tdkchina.com
@@ -64310,6 +64310,7 @@
 .todaymedtech.com
 .todaynic.com
 .todayyj.com
+.todesk.cn
 .todesk.com
 .todgo.com
 .todoen.com
@@ -65212,6 +65213,7 @@
 .tupu360.com
 .tuputech.com
 .tuqiangcn.com
+.tuquge.com
 .tuquu.com
 .turangyq.com
 .turboes.com
@@ -65387,7 +65389,6 @@
 .txzuranji.com
 .ty-archdesign.com
 .ty-group.net
-.ty-im.com
 .ty-magnet.com
 .ty-space.com
 .ty-tyre.com
@@ -70689,7 +70690,6 @@
 .xiaocaoyun.com
 .xiaoce.fun
 .xiaocen.com
-.xiaochamao.com
 .xiaoche001.com
 .xiaochenbaoku.com
 .xiaocheng.com
@@ -71061,6 +71061,7 @@
 .xiegangsir.com
 .xiegekt.com
 .xiehejx.com
+.xiehepcb.com
 .xiehuiyi.com
 .xiejianji.com
 .xiejiaxin.com
@@ -71112,6 +71113,7 @@
 .xikuqi.com
 .xilaijian.com
 .xilanggufen.com
+.xilddt.com
 .xilexuan.com
 .xileyougame.com
 .xili.fan
@@ -71643,7 +71645,6 @@
 .xiumucn.com
 .xiuna.com
 .xiuqicloud.com
-.xiusheji.com
 .xiushuang.com
 .xiushui.net
 .xiusifudianji.com
@@ -73765,6 +73766,7 @@
 .ygfengshui.com
 .yggk.net
 .yghsh.com
+.yghy123.com
 .ygibao.com
 .ygjctech.com
 .ygjj.com
@@ -77069,7 +77071,6 @@
 .zengyuanfen.com
 .zenhotspring.com
 .zenith-group.net
-.zenithmining.com
 .zenixauto.com
 .zenkungforging.com
 .zenmen.com
@@ -77442,6 +77443,7 @@
 .zhang-chu.com
 .zhangbj.com
 .zhangchangfa.com
+.zhangdkl.asia
 .zhangdu.com
 .zhangdu520.com
 .zhangferry.com
@@ -78622,7 +78624,6 @@
 .zigeer.com
 .zigonggroup.com
 .ziguhonglan.com
-.zihai0351.com
 .zihai24.com
 .zihaixiaochengxu.com
 .zihexin.com
