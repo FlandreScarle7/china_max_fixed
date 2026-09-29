@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-25
-# 生成 2026-09-28 20:32:14 UTC
-# 上游 114433 条 → 保留 80531 条
+# 生成 2026-09-29 20:32:11 UTC
+# 上游 114433 条 → 保留 80535 条
 
 payload:
   - '+.0.zone'
@@ -6113,7 +6113,6 @@ payload:
   - '+.ad-goods.com'
   - '+.ad-squirrel.com'
   - '+.ad-young.com'
-  - '+.ad.tencentmusic.com'
   - '+.ad22b2e021014.beer'
   - '+.ad2b0298510251.beer'
   - '+.ad518.com'
@@ -6206,7 +6205,6 @@ payload:
   - '+.adsmogo.net'
   - '+.adssaas.com'
   - '+.adsspr.com'
-  - '+.adstats.tencentmusic.com'
   - '+.adsue.com'
   - '+.adsuni.com'
   - '+.adtaipo.com'
@@ -9300,6 +9298,7 @@ payload:
   - '+.bc150.com'
   - '+.bc4785bd211012.beer'
   - '+.bcactc.com'
+  - '+.bcb5.com'
   - '+.bcbjjy.com'
   - '+.bcbpm.com'
   - '+.bcbvi.com'
@@ -48376,6 +48375,7 @@ payload:
   - '+.myityun.com'
   - '+.myjh.net'
   - '+.myjianzhu.com'
+  - '+.myjiedian.com'
   - '+.myjob500.com'
   - '+.myjujing.com'
   - '+.myk3.com'
@@ -55295,7 +55295,6 @@ payload:
   - '+.repair5g.com'
   - '+.replays.net'
   - '+.repont.com'
-  - '+.report.tencentmusic.com'
   - '+.reportify.cc'
   - '+.reportrc.com'
   - '+.reportway.org'
@@ -58697,6 +58696,7 @@ payload:
   - '+.shougongke.net'
   - '+.shougoumingbiao.com'
   - '+.shouhaoche.com'
+  - '+.shouhou.xin'
   - '+.shouhougou.com'
   - '+.shouhui.com'
   - '+.shouhuigroup.com'
@@ -63139,6 +63139,7 @@ payload:
   - '+.tcs-y.com'
   - '+.tcsae.org'
   - '+.tcsasac.com'
+  - '+.tcsdk.com'
   - '+.tcsdzz.com'
   - '+.tcseny.com'
   - '+.tcsisu.com'
@@ -63314,6 +63315,7 @@ payload:
   - '+.tencentlink.com'
   - '+.tencentmail.com'
   - '+.tencentmiying.com'
+  - '+.tencentmusic.com'
   - '+.tencentoa.com'
   - '+.tencentsurvey.net'
   - '+.tencentwm.com'
@@ -70521,6 +70523,7 @@ payload:
   - '+.xiame.com'
   - '+.xiamenair.com'
   - '+.xiamenfojiao.com'
+  - '+.xiamenhuandongmarathon.com'
   - '+.xiamenjiyang.com'
   - '+.xiamentianqi114.com'
   - '+.xiamenwater.com'
@@ -80330,6 +80333,7 @@ payload:
   - '+.zzgkyy.com'
   - '+.zzgtjtgs.com'
   - '+.zzguest.com'
+  - '+.zzguifan.com'
   - '+.zzhaofang.com'
   - '+.zzhbgs.com'
   - '+.zzhybz.com'
