@@ -1,9 +1,9 @@
 # ChinaMax_Fixed —— 经国内 DNS 实测校验的中国大陆域名集合
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
-# GeoLite2 构建于 2026-09-25
-# 生成 2026-09-29 20:32:11 UTC
-# 上游 114433 条 → 保留 80535 条
+# GeoLite2 构建于 2026-09-29
+# 生成 2026-09-30 20:32:14 UTC
+# 上游 114433 条 → 保留 80542 条
 
 .0.zone
 .000.link
@@ -477,6 +477,7 @@
 .0769pf.com
 .0769sx.com
 .0769web.net
+.0771.tv
 .07712008.com
 .07715555555.com
 .0771cyts.com
@@ -11059,6 +11060,7 @@
 .bonan.vip
 .bond120.com
 .bondent.com
+.bondlady.com
 .boneboat.com
 .bongm.com
 .bongmi.com
@@ -15068,6 +15070,7 @@
 .cicphoto.com
 .cict.com
 .cidf.net
+.ciding.cc
 .cidp.com.cn
 .cidschina.com
 .cidu.net
@@ -23634,6 +23637,7 @@
 .fengyitong.name
 .fengyuncad.com
 .fengyuncx.com
+.fengyunlu.com
 .fengyunpdf.com
 .fengyushan.com
 .fengzegroup.com
@@ -24064,6 +24068,7 @@
 .flashmemoryworld.com
 .flashv8.com
 .flashxsport.com
+.flatsh.com
 .flclb.com
 .flduo.com
 .fle078.com
@@ -28021,6 +28026,7 @@
 .gxdake.com
 .gxdanbao.com
 .gxdangan.com
+.gxdanzo.com
 .gxdaos.com
 .gxdaosheng.com
 .gxdbdl.com
@@ -44767,6 +44773,7 @@
 .longyusheng.org
 .longyutec.com
 .longzhudagroup.com
+.longzhulive.com
 .lonhcloud.net
 .lonlife.org
 .lonmedcn.com
