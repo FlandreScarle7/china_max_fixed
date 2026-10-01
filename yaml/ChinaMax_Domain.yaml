@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-29
-# 生成 2026-09-30 20:32:14 UTC
-# 上游 114433 条 → 保留 80542 条
+# 生成 2026-10-01 20:32:12 UTC
+# 上游 114433 条 → 保留 80549 条
 
 payload:
   - '+.0.zone'
@@ -3023,6 +3023,7 @@ payload:
   - '+.4pnt.com'
   - '+.4portun.com'
   - '+.4px.com'
+  - '+.4pyun.com'
   - '+.4q5q.com'
   - '+.4sjob.com'
   - '+.4sscrm.com'
@@ -9339,6 +9340,7 @@ payload:
   - '+.bcwangluo.net'
   - '+.bcxgame.com'
   - '+.bcxgps.com'
+  - '+.bcxuetang.net'
   - '+.bczcdn.com'
   - '+.bczeducation.cn'
   - '+.bczyyy.com'
@@ -19046,6 +19048,7 @@ payload:
   - '+.dcyzq.com'
   - '+.dczcsc.com'
   - '+.dczkj.com'
+  - '+.dczy168.com'
   - '+.dd-advisor.com'
   - '+.dd-gz.com'
   - '+.dd-img.com'
@@ -20930,6 +20933,7 @@ payload:
   - '+.duofriend.com'
   - '+.duohuanbao.com'
   - '+.duohui.co'
+  - '+.duoic.com'
   - '+.duokaiwang.com'
   - '+.duokaiya.com'
   - '+.duokaiyun.com'
@@ -34280,6 +34284,7 @@ payload:
   - '+.huilunbio.com'
   - '+.huilv8.com'
   - '+.huilvbiao.com'
+  - '+.huilvwang.com'
   - '+.huilw.com'
   - '+.huilyn.com'
   - '+.huiman.net'
@@ -50251,6 +50256,7 @@ payload:
   - '+.noeic.com'
   - '+.nohup.cc'
   - '+.noi.cn'
+  - '+.noirphoenix.studio'
   - '+.nokeeu.com'
   - '+.nokia-sbell.com'
   - '+.nokia.press'
@@ -67559,6 +67565,7 @@ payload:
   - '+.wecasting.com'
   - '+.wecenter.com'
   - '+.weceshi.com'
+  - '+.wechat.com'
   - '+.wechat.design'
   - '+.wechat.org'
   - '+.wechatapp.com'
