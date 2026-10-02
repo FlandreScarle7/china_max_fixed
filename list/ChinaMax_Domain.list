@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-29
-# 生成 2026-10-01 20:32:12 UTC
-# 上游 114433 条 → 保留 80549 条
+# 生成 2026-10-02 20:32:13 UTC
+# 上游 114433 条 → 保留 80564 条
 
 .0.zone
 .000.link
@@ -3276,6 +3276,7 @@
 .51gzgk.com
 .51h5.com
 .51hailang.com
+.51hanghai.com
 .51hangkong.com
 .51haojob.com
 .51hbjob.com
@@ -9373,6 +9374,7 @@
 .bdhulanwang.com
 .bdimg.com
 .bdinfo.net
+.bdjz.vip
 .bdkyr.com
 .bdmozon.com
 .bdpnt.com
@@ -10924,6 +10926,7 @@
 .boadge.com
 .boai.com
 .boai120.com
+.boaihospital.com
 .boairl.com
 .boaiswgs.com
 .boanits.com
@@ -12246,6 +12249,7 @@
 .cbcie.com
 .cbcloud123.com
 .cbcscm.com
+.cbd0512.com
 .cbd263.com
 .cbdstest.download.prss.microsoft.com
 .cbdz13.com
@@ -19205,6 +19209,7 @@
 .deeptrain.net
 .deeptrip.com
 .deepvinci.tech
+.deer-express.com
 .deerhappy.com
 .deerjet.com
 .deerma.com
@@ -24847,6 +24852,7 @@
 .fview.com
 .fvti.com
 .fw-12365.com
+.fw365.online
 .fwcx315.com
 .fwdq.com
 .fwhzxxgbyy.com
@@ -36297,6 +36303,7 @@
 .imlizhi.com
 .immersivetranslate.cn
 .immiexpo.com
+.immiknow.com
 .immomo.com
 .immomogame.com
 .immotors.com
@@ -36999,6 +37006,7 @@
 .itayao.com
 .itbaizhan.com
 .itbegin.com
+.itblw.com
 .itboth.com
 .itboy.net
 .itbulo.com
@@ -50951,6 +50959,7 @@
 .omlzx.com
 .omlzz.com
 .ommoo.com
+.omni-pharma.com
 .omnijoi.com
 .omnivision-group.com
 .omnshoes.com
@@ -52836,6 +52845,7 @@
 .pudijt.com
 .pudongwater.com
 .pudutech.com
+.puduzhai.com
 .puem.org
 .puercn.com
 .puertea.com
@@ -54542,6 +54552,7 @@
 .queniuuy.com
 .queniuvb.com
 .queniuvc.com
+.queniuvk.com
 .queniuvq.com
 .queniuvx.com
 .queniuwb.com
@@ -68543,6 +68554,7 @@
 .wifilu.com
 .wifiniu.com
 .wifiwx.com
+.wifussion.com
 .wigenbio.com
 .wiicha.com
 .wiihg.com
@@ -69794,6 +69806,7 @@
 .wxxrh.com
 .wxxsjyk.com
 .wxxsyg.com
+.wxxuetao.com
 .wxxyxnb.com
 .wxy1314.com
 .wxyhhosp.com
@@ -69937,6 +69950,7 @@
 .wzright.com
 .wzrjsp.com
 .wzrm-hospital.com
+.wzrygcht.com
 .wzshe.com
 .wzshuidian.com
 .wzsrmyy.com
@@ -75792,6 +75806,7 @@
 .yuekeyun.com
 .yuelanxinghe.com
 .yueliangshi.com
+.yuelongchina.com
 .yueloo.com
 .yuelu.net
 .yuelun.com
