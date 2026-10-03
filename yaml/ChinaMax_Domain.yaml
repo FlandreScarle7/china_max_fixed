@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-09-29
-# 生成 2026-10-02 20:32:13 UTC
-# 上游 114433 条 → 保留 80564 条
+# 生成 2026-10-03 20:32:36 UTC
+# 上游 114433 条 → 保留 80573 条
 
 payload:
   - '+.0.zone'
@@ -12718,6 +12718,7 @@ payload:
   - '+.cdjtzhtc.com'
   - '+.cdjzso.com'
   - '+.cdkeynogap.com'
+  - '+.cdkf.com'
   - '+.cdkjbg.com'
   - '+.cdkjw.org'
   - '+.cdlaobing.com'
@@ -25059,6 +25060,7 @@ payload:
   - '+.gac-capital.com'
   - '+.gac-nio.com'
   - '+.gacfca.com'
+  - '+.gacfiatauto.com'
   - '+.gachn.com'
   - '+.gacmotor.com'
   - '+.gacrnd.com'
@@ -28121,6 +28123,7 @@ payload:
   - '+.gxfengjie.com'
   - '+.gxfengxingjq.com'
   - '+.gxffjt.com'
+  - '+.gxfhjs.com'
   - '+.gxfhny.com'
   - '+.gxfhxx.com'
   - '+.gxfi.net'
@@ -43811,6 +43814,7 @@ payload:
   - '+.lidepower.com'
   - '+.lidg-fueltank.com'
   - '+.lidianchizu.com'
+  - '+.lidianren.com'
   - '+.lidihuo.com'
   - '+.lidodo.com'
   - '+.lidu6.com'
@@ -48198,6 +48202,7 @@ payload:
   - '+.muzhun.com'
   - '+.muziang.com'
   - '+.muzigame.com'
+  - '+.muzisoft.com'
   - '+.muziyueqiu.com'
   - '+.muzuhui.com'
   - '+.mvad.com'
@@ -51526,6 +51531,7 @@ payload:
   - '+.paipaibang.com'
   - '+.paipay.net'
   - '+.paipianbang.com'
+  - '+.pairmb.com'
   - '+.paiwan.com'
   - '+.paixiangxian.com'
   - '+.paixin.com'
@@ -54798,6 +54804,7 @@ payload:
   - '+.qyhl.vip'
   - '+.qyhr.org'
   - '+.qyiliao.com'
+  - '+.qyins.com'
   - '+.qyinter.com'
   - '+.qyjg.com'
   - '+.qyjidianqi.com'
@@ -58274,6 +58281,7 @@ payload:
   - '+.sherowm.com'
   - '+.sheshui.com'
   - '+.shetu66.com'
+  - '+.sheui.com'
   - '+.shevdc.org'
   - '+.sheweikeji.com'
   - '+.shexgrp.com'
@@ -78975,6 +78983,7 @@ payload:
   - '+.zjhkele.com'
   - '+.zjhlcnc.com'
   - '+.zjhlyyjt.com'
+  - '+.zjhnlianzhong.com'
   - '+.zjhnrb.com'
   - '+.zjhospital.net'
   - '+.zjhpyy.com'
