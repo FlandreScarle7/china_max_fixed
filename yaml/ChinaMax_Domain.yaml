@@ -1,9 +1,9 @@
 # ChinaMax_Fixed —— 经国内 DNS 实测校验的中国大陆域名集合
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
-# GeoLite2 构建于 2026-09-29
-# 生成 2026-10-03 20:32:36 UTC
-# 上游 114433 条 → 保留 80573 条
+# GeoLite2 构建于 2026-10-02
+# 生成 2026-10-04 20:32:14 UTC
+# 上游 114433 条 → 保留 80579 条
 
 payload:
   - '+.0.zone'
@@ -4675,6 +4675,7 @@ payload:
   - '+.766.ink'
   - '+.7663.com'
   - '+.766899d4f1011.beer'
+  - '+.766z.com'
   - '+.767qkdj34u.com'
   - '+.767stock.com'
   - '+.76831.org'
@@ -23712,6 +23713,7 @@ payload:
   - '+.ffepower.com'
   - '+.fffff.games'
   - '+.fffont.com'
+  - '+.ffhome.com'
   - '+.ffis.me'
   - '+.ffls-edu.com'
   - '+.ffmomola.com'
@@ -34852,6 +34854,7 @@ payload:
   - '+.hyhy.cc'
   - '+.hyilp.com'
   - '+.hyimmi.com'
+  - '+.hyj999.com'
   - '+.hyjgxx.com'
   - '+.hyjhgy.com'
   - '+.hyjnpx.com'
@@ -49554,6 +49557,7 @@ payload:
   - '+.njcw.com'
   - '+.njcwlk.com'
   - '+.njcxj.com'
+  - '+.njd1.com'
   - '+.njdapaidang.com'
   - '+.njdatang.com'
   - '+.njdewo.com'
@@ -51091,6 +51095,7 @@ payload:
   - '+.oonne.com'
   - '+.ooomba.com'
   - '+.ooopic.com'
+  - '+.oopz.vip'
   - '+.oouyan.com'
   - '+.oov.cc'
   - '+.ooxoo.net'
@@ -65879,6 +65884,7 @@ payload:
   - '+.unicompayment.com'
   - '+.unicon-hibar.com'
   - '+.unifiedbus.com'
+  - '+.unifl-networks.com'
   - '+.uniflows.com'
   - '+.unifound.net'
   - '+.unifull.com'
