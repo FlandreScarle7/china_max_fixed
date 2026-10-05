@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-10-02
-# 生成 2026-10-04 20:32:14 UTC
-# 上游 114433 条 → 保留 80579 条
+# 生成 2026-10-05 20:32:13 UTC
+# 上游 114433 条 → 保留 80583 条
 
 payload:
   - '+.0.zone'
@@ -7049,6 +7049,7 @@ payload:
   - '+.algkfd.com'
   - '+.algorithmart.com'
   - '+.alhywj.com'
+  - '+.ali-gtm-01.net'
   - '+.ali-health.com'
   - '+.ali-star.com'
   - '+.ali213.com'
@@ -23753,6 +23754,7 @@ payload:
   - '+.fhmooc.com'
   - '+.fhoverseas.com'
   - '+.fhsfilm.com'
+  - '+.fht360.com'
   - '+.fhtlw.com'
   - '+.fhvalley.com'
   - '+.fhycedu.com'
@@ -32845,6 +32847,7 @@ payload:
   - '+.hnwlcm.com'
   - '+.hnwlxh.com'
   - '+.hnwlycg.com'
+  - '+.hnwsbz.com'
   - '+.hnwtqx.com'
   - '+.hnwwsjzx.com'
   - '+.hnwyxx.com'
@@ -47729,6 +47732,7 @@ payload:
   - '+.mojicdn.com'
   - '+.mojichina.com'
   - '+.mojichina.net'
+  - '+.mojidict.com'
   - '+.mojidoc.com'
   - '+.mojie.app'
   - '+.mojieai.com'
