@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-10-02
-# 生成 2026-10-05 20:32:13 UTC
-# 上游 114433 条 → 保留 80583 条
+# 生成 2026-10-06 20:32:12 UTC
+# 上游 114433 条 → 保留 80597 条
 
 payload:
   - '+.0.zone'
@@ -5400,6 +5400,7 @@ payload:
   - '+.925g.com'
   - '+.926kf.com'
   - '+.927927.com'
+  - '+.927953.com'
   - '+.927game.com'
   - '+.928.sale'
   - '+.92913.com'
@@ -6428,6 +6429,7 @@ payload:
   - '+.ahitv.com'
   - '+.ahjdq.com'
   - '+.ahjgxy.com'
+  - '+.ahjinyu.com'
   - '+.ahjk.com'
   - '+.ahjkjt.com'
   - '+.ahjoe.com'
@@ -9599,6 +9601,7 @@ payload:
   - '+.bendijin.net'
   - '+.bendis.cc'
   - '+.bendiw.cc'
+  - '+.bendizhidao.com'
   - '+.benduo.net'
   - '+.benewake.com'
   - '+.benfeijd.com'
@@ -10083,6 +10086,7 @@ payload:
   - '+.binggo.com'
   - '+.binghelengmei.com'
   - '+.bingjo.com'
+  - '+.binglai.net'
   - '+.binglanggu.com'
   - '+.binglianhuajianzhan.com'
   - '+.bingliekeji.com'
@@ -19378,6 +19382,7 @@ payload:
   - '+.devotiongroup.com'
   - '+.devourad.com'
   - '+.devsapp.net'
+  - '+.devsiki.com'
   - '+.devskyr.com'
   - '+.devui.design'
   - '+.deweier.com'
@@ -19484,6 +19489,7 @@ payload:
   - '+.dg-dx.com'
   - '+.dg-hanxin.com'
   - '+.dg-mall.com'
+  - '+.dg-paas.com'
   - '+.dg-tcm.com'
   - '+.dg11185.com'
   - '+.dg121.com'
@@ -26096,6 +26102,7 @@ payload:
   - '+.gflz.com'
   - '+.gfmpv.com'
   - '+.gfnormal08at.com'
+  - '+.gfnormal09ag.com'
   - '+.gforward.org'
   - '+.gfren.org'
   - '+.gfrtrttweet.com'
@@ -31747,6 +31754,7 @@ payload:
   - '+.hercules-micro.com'
   - '+.herdar.com'
   - '+.herdcloud.com'
+  - '+.herdpcdn.com'
   - '+.herdsric.com'
   - '+.here120.com'
   - '+.here325.com'
@@ -35392,6 +35400,7 @@ payload:
   - '+.i588ku.com'
   - '+.i5a6.com'
   - '+.i5i6.net'
+  - '+.i5p.com'
   - '+.i5sto.com'
   - '+.i5tea.com'
   - '+.i5zhen.com'
@@ -37873,6 +37882,7 @@ payload:
   - '+.jiabaoyuanlin.com'
   - '+.jiabasha.com'
   - '+.jiaben.com'
+  - '+.jiaboojc.com'
   - '+.jiacai001.com'
   - '+.jiacaitc.com'
   - '+.jiachangshichutieqi.com'
@@ -43032,6 +43042,7 @@ payload:
   - '+.lazymap.com'
   - '+.lazystones.com'
   - '+.lbbb.cc'
+  - '+.lbbee.com'
   - '+.lbbniu.com'
   - '+.lbctjt.com'
   - '+.lbd-group.com'
@@ -50160,6 +50171,7 @@ payload:
   - '+.nnrig.com'
   - '+.nnrongjie.com'
   - '+.nnruixin.com'
+  - '+.nnrxzm.com'
   - '+.nnryf.com'
   - '+.nnsatai.com'
   - '+.nnsbc.com'
@@ -62954,6 +62966,7 @@ payload:
   - '+.tao8090.com'
   - '+.taoad.com'
   - '+.taoart.com'
+  - '+.taoban.com'
   - '+.taobao.com'
   - '+.taobao.global'
   - '+.taobao.org'
@@ -76617,6 +76630,7 @@ payload:
   - '+.yz-kjjt.com'
   - '+.yz-li.com'
   - '+.yz-machinery.com'
+  - '+.yz-proton.com'
   - '+.yz-show.com'
   - '+.yz-xd.com'
   - '+.yz0752.com'
