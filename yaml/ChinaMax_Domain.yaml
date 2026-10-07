@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-10-02
-# 生成 2026-10-06 20:32:12 UTC
-# 上游 114433 条 → 保留 80597 条
+# 生成 2026-10-07 20:32:14 UTC
+# 上游 114433 条 → 保留 80604 条
 
 payload:
   - '+.0.zone'
@@ -3282,6 +3282,7 @@ payload:
   - '+.51haojob.com'
   - '+.51hbjob.com'
   - '+.51hchc.com'
+  - '+.51hcw.com'
   - '+.51hei.com'
   - '+.51hejia.com'
   - '+.51hgtg.com'
@@ -4805,6 +4806,7 @@ payload:
   - '+.7ko.com'
   - '+.7kww.net'
   - '+.7littlemen.com'
+  - '+.7lk.com'
   - '+.7lw.com'
   - '+.7mah2.com'
   - '+.7moor-fs2.com'
@@ -15030,6 +15032,7 @@ payload:
   - '+.chuxingpay.com'
   - '+.chuxingyouhui.com'
   - '+.chuxinhd.com'
+  - '+.chuxinhudong.com'
   - '+.chuxueyun.com'
   - '+.chuyaer.com'
   - '+.chuzhaobiao.com'
@@ -26082,6 +26085,7 @@ payload:
   - '+.gf-metals.com'
   - '+.gf.cc'
   - '+.gf.com.cn'
+  - '+.gf139.com'
   - '+.gf1579.com'
   - '+.gf7979cn.com'
   - '+.gfan.com'
@@ -32298,6 +32302,7 @@ payload:
   - '+.hitevision-solutions.com'
   - '+.hitevision.com'
   - '+.hitgk.com'
+  - '+.hitokoto.cn'
   - '+.hitoor.com'
   - '+.hitouch.com'
   - '+.hitoupiao.com'
@@ -39577,6 +39582,7 @@ payload:
   - '+.joytunescn.com'
   - '+.joytype.com'
   - '+.joyu.com'
+  - '+.joyuai.com'
   - '+.joyware.com'
   - '+.joywellsemi.com'
   - '+.joywii.net'
@@ -44066,6 +44072,7 @@ payload:
   - '+.lingyiliebian.com'
   - '+.lingyinsi.com'
   - '+.lingyinsi.org'
+  - '+.lingyiwanwu.com'
   - '+.lingyue-digital.com'
   - '+.lingyuecloud.com'
   - '+.lingyuedianzi.com'
