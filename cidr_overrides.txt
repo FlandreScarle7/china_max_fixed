@@ -1,0 +1,6 @@
+# 人工纠正 GeoIP 判定。格式：  notcn <CIDR>  /  cn <CIDR>
+# notcn 优先于 cn，两者都优先于 MaxMind。
+
+# MaxMind 判 CN，但 APNIC 登记为 RACKIP CONSULTANCY PTE. LTD.（SG），
+# 从上海实测 212ms 且经联通国际出口（219.158.x），客观上不在大陆。
+notcn 202.95.0.0/19

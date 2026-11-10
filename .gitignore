@@ -1,0 +1,8 @@
+*.mmdb
+*.tar.gz
+*.log
+*.bak*
+.lock
+maxmind.conf
+audit.conf
+__pycache__/

@@ -1,0 +1,88 @@
+name: ChinaMax Domain Audit
+
+on:
+  schedule:
+    - cron: "30 20 * * *" # 每日北京时间 04:30 (UTC 20:30)
+  workflow_dispatch:      # 支持网页端一键手动触发
+    inputs:
+      limit:
+        description: "限制审计数量 (0 表示常规增量审计)"
+        required: false
+        default: "0"
+      full:
+        description: "是否全量审计 (true/false)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    name: Run ChinaMax Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Install Runtime Dependencies
+        run: |
+          sed -i "s@archive.ubuntu.com@mirrors.tencentyun.com@g" /etc/apt/sources.list /etc/apt/sources.list.d/* 2>/dev/null || true
+          sed -i "s@security.ubuntu.com@mirrors.tencentyun.com@g" /etc/apt/sources.list /etc/apt/sources.list.d/* 2>/dev/null || true
+          apt-get update -qq
+          apt-get install -y -qq dnsutils python3 curl git openssh-client
+
+      - name: Execute Audit Script
+        env:
+          MAXMIND_ACCOUNT_ID: ${{ secrets.MAXMIND_ACCOUNT_ID }}
+          MAXMIND_LICENSE_KEY: ${{ secrets.MAXMIND_LICENSE_KEY }}
+          PROXY_HOST: "ghraw.flandre.vip"
+          PROXY_IP: "3.1.208.104"
+        run: |
+          ARGS="--no-push"
+          if [ "${{ github.event.inputs.full }}" = "true" ]; then
+            ARGS="$ARGS --full"
+          fi
+          if [ -n "${{ github.event.inputs.limit }}" ] && [ "${{ github.event.inputs.limit }}" != "0" ]; then
+            ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
+          fi
+          
+          echo "Executing: python3 audit.py $ARGS"
+          python3 audit.py $ARGS
+
+      - name: Commit and Push Changes
+        env:
+          GH_DEPLOY_KEY: ${{ secrets.GH_DEPLOY_KEY }}
+        run: |
+          git config user.name "Gitea Actions"
+          git config user.email "actions@noreply.git.flandre.vip"
+
+          # 暂存所有审计规则产物与状态文件
+          git add yaml/ list/ README.md state.json tools/
+
+          if git diff --cached --quiet; then
+            echo "无变更需要提交。"
+            exit 0
+          fi
+
+          COMMIT_MSG="更新规则集：$(date +%Y-%m-%d) [skip ci]"
+          git commit -m "$COMMIT_MSG"
+
+          # 1. 提交并推送到 Gitea 本地仓库
+          echo "Pushing changes to Gitea origin..."
+          git push origin main
+
+          # 2. 如果配置了 GitHub 部署密钥，同步推送到 GitHub
+          if [ -n "$GH_DEPLOY_KEY" ]; then
+            echo "Syncing changes to GitHub repository..."
+            mkdir -p ~/.ssh
+            echo "$GH_DEPLOY_KEY" > ~/.ssh/id_ed25519
+            chmod 600 ~/.ssh/id_ed25519
+            ssh-keyscan -t ed25519,rsa github.com >> ~/.ssh/known_hosts 2>/dev/null || true
+            git remote add github git@github.com:FlandreScarle7/china_max_fixed.git 2>/dev/null || true
+            git push github main || echo "Warning: GitHub push failed"
+          fi
+
+          echo "所有发布推送完成！"
