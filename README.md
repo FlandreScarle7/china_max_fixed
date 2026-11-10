@@ -14,7 +14,7 @@
 把它们放进直连列表有两个后果：访问这些站点时**不走代理**，
 以及**DNS 查询暴露**。对按域名分流的配置来说，这是静默失效。
 
-本项目合并两个上游共 114,433 条逐条实测，其中 33,829 条（29.6%）
+本项目合并两个上游共 113,481 条逐条实测，其中 33,222 条（29.3%）
 解析不到中国大陆 IP。
 
 上游有两个：[blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) 的
@@ -49,11 +49,11 @@ ChinaMax 覆盖广但机器生成，[v2fly/domain-list-community](https://github
 
 | | |
 | --- | --- |
-| 上游条目 | 114,433 |
-| 保留 | 80,604 |
-| 剔除 | 33,829（29.6%） |
-| GeoLite2 构建于 | 2026-10-02 |
-| 更新于 | 2026-10-07 20:32:14 UTC |
+| 上游条目 | 113,481 |
+| 保留 | 80,259 |
+| 剔除 | 33,222（29.3%） |
+| GeoLite2 构建于 | 2026-11-06 |
+| 更新于 | 2026-11-10 19:59:35 UTC |
 
 ## 用法
 
@@ -62,7 +62,7 @@ ChinaMax 覆盖广但机器生成，[v2fly/domain-list-community](https://github
 **YAML**（`behavior: domain` 规则集）
 
 ```
-https://raw.githubusercontent.com/FlandreScarle7/china_max_fixed/main/yaml/ChinaMax_Domain.yaml
+<raw base>/yaml/ChinaMax_Domain.yaml
 ```
 
 ```yaml
@@ -72,18 +72,18 @@ rule-providers:
     behavior: domain
     format: yaml
     interval: 86400
-    url: 'https://raw.githubusercontent.com/FlandreScarle7/china_max_fixed/main/yaml/ChinaMax_Domain.yaml'
+    url: '<raw base>/yaml/ChinaMax_Domain.yaml'
     path: './RuleSet/ChinaMax_Domain.yaml'
 ```
 
 **纯文本列表**（每行一个域名，前导 `.` 表示含子域名）
 
 ```
-https://raw.githubusercontent.com/FlandreScarle7/china_max_fixed/main/list/ChinaMax_Domain.list
+<raw base>/list/ChinaMax_Domain.list
 ```
 
 ```
-DOMAIN-SET,https://raw.githubusercontent.com/FlandreScarle7/china_max_fixed/main/list/ChinaMax_Domain.list,DIRECT
+DOMAIN-SET,<raw base>/list/ChinaMax_Domain.list,DIRECT
 ```
 
 ## 自行部署

@@ -1,4 +1,3 @@
-"""最小 MaxMind DB 读取器 —— 只为查国家码，零依赖"""
 import ipaddress, struct
 
 class MMDB:
@@ -19,11 +18,10 @@ class MMDB:
         self.data_start = self.tree_size + 16
         self._memo = {}
 
-    # ---- 数据段解码 ----
     def _size(self, off):
         ctrl = self.buf[off]; off += 1
         t = ctrl >> 5
-        if t == 0:                                  # 扩展类型
+        if t == 0:
             t = self.buf[off] + 7; off += 1
         size = ctrl & 0x1F
         if size == 29:
@@ -36,7 +34,7 @@ class MMDB:
 
     def _decode(self, off, base):
         t, size, off, ctrl = self._size(off)
-        if t == 1:                                   # 指针
+        if t == 1:
             ps = (ctrl >> 3) & 0x3
             v = ctrl & 0x7
             if ps == 0:
@@ -79,7 +77,6 @@ class MMDB:
             return struct.unpack(">f", self.buf[off:off+4])[0], off + 4
         return None, off + size
 
-    # ---- 树遍历 ----
     def _rec(self, node, side):
         b = self.buf
         o = node * self.node_bytes
@@ -119,11 +116,7 @@ class MMDB:
         return None
 
     def is_cn(self, ip):
-        """是否中国大陆。严格只看 country.iso_code —— 绝不回退到
-        registered_country：腾讯云新加坡 43.109.70.194 的 country=HK 而
-        registered_country=SG，阿里云香港 47.76.127.217 的 country=HK 而
-        registered_country=US，按注册国判方向全乱。
-        港澳台代码分别是 HK / MO / TW，因此天然被排除。"""
+
         v = self._memo.get(ip)
         if v is None:
             d = self.get(ip)
