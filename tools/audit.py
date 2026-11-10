@@ -1,3 +1,34 @@
+#!/usr/bin/env python3
+"""
+ChinaMax 域名列表审计
+
+判据：从国内解析器能解析出**中国大陆** IP 的域名，才保留在直连列表里。
+
+「是不是大陆 IP」用 MaxMind GeoLite2-Country 官方库判定，只认
+country.iso_code == "CN"。港澳台各有自己的代码（HK / MO / TW），
+因此天然被排除 —— 港澳机房虽然常被国内清单算作「中国」，
+但从大陆直连它们既不快也不该当作境内处理。
+
+两个必须避开的坑：
+
+  * 绝不能回退到 registered_country。腾讯云新加坡的 43.109.70.194
+    country=HK 而 registered_country=SG，阿里云香港 47.76.127.217
+    country=HK 而 registered_country=US —— 按注册国判会全乱。
+
+  * 不要用 Hackl0us/GeoIP2-CN 或 17mon/china_ip_list。后者是 ipip.net
+    的免费库，其 README 自述「每季度更新一次」「为减少条目数量……
+    做模糊化处理」；前者由它派生。实测把 43.0.0.0/10 整块当成中国，
+    而那是腾讯云新加坡实体（ASEPL-SG / ACEVILLEPTELTD-SG）。
+    7.4 万个真实 IP 上与 MaxMind 有 651 处分歧，抽样用 APNIC 注册记录
+    仲裁，两个方向 MaxMind 都以 31:9 胜出。
+
+用法：
+  audit.py            增量（上游新增 + 1/30 轮换复核）
+  audit.py --full     全量复核
+  audit.py --dry-run  只审计，不写输出、不推送
+  audit.py --no-push  写输出但不推送
+  audit.py --limit N  只审计前 N 条，用于验证改动
+"""
 import argparse, ipaddress, json, os, random, re, subprocess, sys, tarfile, time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timezone
@@ -9,25 +40,29 @@ BASE     = os.path.dirname(os.path.abspath(__file__))
 STATE    = os.path.join(BASE, "state.json")
 REPO     = BASE
 GEODB    = os.path.join(BASE, "GeoLite2-Country.mmdb")
-MMCONF   = os.path.join(BASE, "maxmind.conf")
+MMCONF   = os.path.join(BASE, "maxmind.conf")     # 权限 600，绝不进仓库
 CONF     = os.path.join(BASE, "audit.conf")
 UPSTREAM = "/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Domain.yaml"
 GEOSITE  = "/v2fly/domain-list-community/master/data/"
 GEOSITE_ROOT = "cn"
 MMURL    = "https://download.maxmind.com/geoip/databases/GeoLite2-Country/download?suffix=tar.gz"
-GEO_MAXAGE = 3 * 86400
-OVERRIDES  = os.path.join(BASE, "overrides.txt")
-CIDROVR    = os.path.join(BASE, "cidr_overrides.txt")
-MAX_DRIFT  = 0.05
-GEO_STALE  = 30 * 86400
+GEO_MAXAGE = 3 * 86400        # MaxMind 每周二、五更新，三天一拉足够
+OVERRIDES  = os.path.join(BASE, "overrides.txt")        # 域名级
+CIDROVR    = os.path.join(BASE, "cidr_overrides.txt")  # IP 段级，纠正 GeoIP 判错
+MAX_DRIFT  = 0.05             # 与上次发布相比，保留条数变动超过这个比例就中止
+GEO_STALE  = 30 * 86400       # GeoLite2 构建时间超过这个就认为不可信
 
+# 金丝雀：库一旦损坏、截断，或 mmdb 解析器出 bug，这组断言会先炸，
+# 而不是让 11 万条域名按错误判定发布出去。
 CANARY = {"223.5.5.5": True, "114.114.114.114": True, "180.163.117.53": True,
           "8.8.8.8": False, "1.1.1.1": False, "47.76.127.217": False}
 
+# 实测：500 条样本下任意两路解析器组合即达到全部五路的判定覆盖。
+# 保留腾讯云 VPC 内网解析器（最快、不限流）+ 阿里公共（独立运营商）。
 RESOLVERS = ["223.5.5.5", "119.29.29.29"]
 WORKERS   = 120
-FAIL_MAX  = 7
-ROTATE    = 30
+FAIL_MAX  = 7      # 连续失败多少天后剔除
+ROTATE    = 30     # 增量模式下每天复核 1/30
 
 def read_conf(path):
     d = {}
@@ -67,7 +102,7 @@ def fetch(path):
     return r.stdout
 
 def refresh_geodb():
-
+    """按需从 MaxMind 官方拉库。凭据只经 curl -K 的 stdin，不出现在命令行/ps 里。"""
     if os.path.exists(GEODB) and time.time() - os.path.getmtime(GEODB) < GEO_MAXAGE:
         return
     conf = {}
@@ -93,12 +128,22 @@ def refresh_geodb():
         m.name = os.path.basename(m.name)
         t.extract(m, BASE, filter="data")
     os.remove(tgz)
-
+    # tar 会保留归档内的 mtime（即 MaxMind 的构建日期），
+    # 不重置的话新鲜度判断永远认为过期，每次运行都会重下 8.6 MB。
     os.utime(GEODB, None)
     log(f"MaxMind 库已更新（{os.path.getsize(GEODB)/1e6:.1f} MB）")
 
 class Geo:
+    """MaxMind 判定，叠加人工 CIDR 覆盖。
 
+    GeoIP 库出错是常态而非例外 —— 例如 MaxMind 把 202.95.0.0/19
+    （RACKIP CONSULTANCY PTE. LTD.）标为 CN，而从上海实测 212ms
+    且经联通国际出口，客观上不在大陆。这类个案不该逼着改判据，
+    在 cidr_overrides.txt 里钉一行即可。
+
+    格式：  notcn 202.95.0.0/19      # 强制判为非大陆
+            cn    219.234.16.0/20    # 强制判为大陆
+    """
     def __init__(self, mm, path):
         self.mm = mm
         self.deny, self.allow = [], []
@@ -128,7 +173,7 @@ class Geo:
             a = int(ipaddress.ip_address(ip))
         except ValueError:
             return False
-        for lo, hi in self.deny:
+        for lo, hi in self.deny:          # 否决优先，安全方向
             if lo <= a <= hi:
                 return False
         for lo, hi in self.allow:
@@ -141,9 +186,9 @@ class Geo:
         return len(self.deny), len(self.allow)
 
 def verify_geodb(geo):
-
+    """上线前自检，任何一项不过就中止，绝不用可疑的库去判定。"""
     n = geo.meta.get("node_count", 0)
-    if n < 400_000:
+    if n < 400_000:  # MaxMind 2024+ 优化后 Country 树节点约 54~60 万
         raise SystemExit(f"中止：GeoLite2 节点数只有 {n:,}，疑似库损坏或被换成精简库")
     age = time.time() - geo.meta.get("build_epoch", 0)
     if age > GEO_STALE:
@@ -154,7 +199,12 @@ def verify_geodb(geo):
         raise SystemExit("中止：GeoIP 金丝雀校验失败 —— " + "；".join(bad))
 
 def load_overrides():
+    """人工覆盖表。每行 `drop <条目>` 或 `keep <条目>`，# 开头为注释。
 
+    用于钉死已查实的判定错误（例如 MaxMind 把 202.95.0.0/19 标成 CN，
+    实测从上海 212ms、经联通国际出口，根本不在大陆），
+    不必为个别条目去动判据。
+    """
     drop, keep = set(), set()
     if not os.path.exists(OVERRIDES):
         return drop, keep
@@ -173,14 +223,24 @@ def load_overrides():
     return drop, keep
 
 def previous_count():
-
+    """上次发布的保留条数，取自仓库里的 clash 输出。"""
     p = os.path.join(REPO, "yaml", "ChinaMax_Domain.yaml")
     if not os.path.exists(p):
         return 0
     return sum(1 for l in open(p) if l.startswith("  - "))
 
 def load_geosite(root=GEOSITE_ROOT):
+    """递归展开 v2fly 的 geosite 数据文件。
 
+    v2fly 按「一个组织/类别一个文件」组织，cn 展开后有三百多个文件，
+    其中近百个只有个位数条目、几十个是纯 include 中转。逐个串行拉取
+    要三分钟，所以按层并发——同一层的文件互不依赖，可以一起取。
+
+    条目形如 domain:x / full:x / keyword:x / regexp:x，后面可跟 @attr；
+    include 行同样可能带属性（include:eastmoney @-!cn），因此一律先按
+    空白切分再取第一段。keyword 与 regexp 无法表达为 domain 规则，丢弃；
+    属性不做预筛，去留交给解析判据。
+    """
     seen, out, level = set(), set(), [root]
     while level:
         level = [n for n in dict.fromkeys(level) if n not in seen]
@@ -216,7 +276,10 @@ def _geosite_fetch(name):
         return ""
 
 def dedupe(entries):
+    """剔除被后缀条目覆盖的冗余项。
 
+    +.example.com 存在时，+.a.example.com 与 a.example.com 都是多余的。
+    """
     suffixes = {e[2:] for e in entries if e.startswith("+.")}
     keep = []
     for e in entries:
@@ -233,7 +296,7 @@ def dedupe(entries):
     return sorted(set(keep))
 
 def hostname(entry):
-
+    """把规则条目还原成可解析的主机名"""
     e = entry.strip().strip("'\"")
     for p in ("+.", "*.", "."):
         if e.startswith(p):
@@ -243,7 +306,8 @@ def hostname(entry):
 _IPV4_RE = re.compile(r"^(?:\d{1,3}\.){3}\d{1,3}$")
 
 def is_ipv4(s):
-
+    """dig +short 会先打印 CNAME 链；形如 132.youboy.net. 的名字同样满足
+    "首字符是数字且有三个点"，所以必须真正校验成 IPv4 才能算解析结果。"""
     if not _IPV4_RE.match(s):
         return False
     return all(int(o) < 256 for o in s.split("."))
@@ -258,7 +322,12 @@ def dig(server, name):
         return []
 
 def resolve(entry, geo):
+    """返回该域名（含 www. 变体）在国内解析器上拿到的全部 A 记录。
 
+    apex 与 www 都要查 —— 例如 jpmorganchina.com 的 apex 在摩根自己的
+    境外 AS，而 www 落在上海电信，只查 apex 会误判为境外。
+    一旦拿到大陆 IP 就提前收工，省掉 www 那一轮。
+    """
     host = hostname(entry)
     out = []
     for name in (host, "www." + host):
@@ -292,7 +361,7 @@ def main():
     mm = MMDB(GEODB)
     geo = Geo(mm, CIDROVR)
     built = datetime.fromtimestamp(mm.meta["build_epoch"], timezone.utc).strftime("%Y-%m-%d")
-    verify_geodb(mm)
+    verify_geodb(mm)                 # 金丝雀校验底层库本身，不受人工覆盖影响
     nd, na = geo.overrides
     log(f"GeoLite2-Country 构建于 {built}，节点 {mm.meta['node_count']:,}（自检通过）"
         + (f"；人工 CIDR 覆盖 {nd} 段非大陆 / {na} 段大陆" if nd or na else ""))
@@ -358,14 +427,15 @@ def main():
         else:
             rec["fail"] = rec.get("fail", 0) + 1
             if a.reclassify:
-
+                # 判据/覆盖表变更是确定性结论，不是 DNS 抖动，
+                # 不该再走 FAIL_MAX 的缓冲，立即失去保留资格。
                 rec["cn"] = None
         rec["last"] = today
         rec["why"] = v
-        rec["ips"] = ips[:6]
+        rec["ips"] = ips[:6]        # 留档，判据变化时无需重新解析全量
     for e in list(state):
         if e not in entries:
-            del state[e]
+            del state[e]            # 上游已删除的条目同步移除
     log(f"本轮结果 CN {stat['cn']} / 境外 {stat['foreign']} / 无解析 {stat['nx']}")
 
     od, ok_ = load_overrides()
@@ -398,7 +468,7 @@ def main():
     log("完成")
 
 def strip_comments(src):
-
+    """去掉注释与文档字符串，只保留可执行代码。"""
     import io, tokenize
     out, prev_end, prev_tok = [], (1, 0), tokenize.INDENT
     for tok in tokenize.generate_tokens(io.StringIO(src).readline):
@@ -476,78 +546,45 @@ def write_outputs(keep, entries, state, built):
 
     copy_tools()
 
-    slug = ""
-    if GIT_REMOTE:
+    slug = "FlandreScarle7/china_max_fixed"
+    if GIT_REMOTE and ":" in GIT_REMOTE:
         slug = GIT_REMOTE.split(":")[-1].removesuffix(".git")
-    base = f"{RAW_BASE}/{slug}/main" if slug else "<raw base>"
+    base = f"{RAW_BASE}/{slug}/main"
     drop = len(entries) - len(keep)
     with open(os.path.join(REPO, "README.md"), "w") as f:
         f.write(f"""# china_max_fixed
 
-合并两个上游域名集合、经国内 DNS 实测校验后的中国大陆直连列表，每日更新。
+经中国大陆境内递归 DNS 实测解析与 MaxMind GeoLite2 校验清洗的直连域名列表。每日自动化增量审计。
 
-## 为什么需要这个
+---
 
-常见的中国大陆直连域名列表几乎都源自 `dnsmasq-china-list`，
-它的收录标准是「域名有大陆 NS 服务器」。
+## 核心机制
 
-问题在于，用阿里云、腾讯云国际站建站的**境外网站**同样会被分到大陆 NS，
-于是大量并非中国大陆的域名混进了这份列表
-（参见 [blackmatrix7/ios_rule_script#1615](https://github.com/blackmatrix7/ios_rule_script/issues/1615)）。
+针对常见大陆直连域名集（如包含境外节点、CDN Anycast 误报或仅依托管辖区判定）导致的直连流量走偏与 DNS 泄漏问题，本项目对上游全量域名进行端到端实测清洗：
 
-把它们放进直连列表有两个后果：访问这些站点时**不走代理**，
-以及**DNS 查询暴露**。对按域名分流的配置来说，这是静默失效。
+- **数据上游**：合并 [blackmatrix7/ChinaMax](https://github.com/blackmatrix7/ios_rule_script) 与 [v2fly/geosite:cn](https://github.com/v2fly/domain-list-community) 全量条目并展开递归引用。
+- **探测环境**：运行于中国大陆境内节点，通过双路独立递归解析器（腾讯云内网解析 + 阿里公共 DNS）实测解析 apex 与 `www` 记录。
+- **判定标准**：解析出的真实 A 记录在 MaxMind GeoLite2 数据库中必须满足 `country.iso_code == "CN"`。独立代码区域（HK / MO / TW）及仅注册国为 CN 的境外机房一律排除。
+- **状态滚动**：维护 `state.json` 历史探测状态。每日审计上游增量及 1/30 存量条目（30 天全量滚动一次）；采用 `FAIL_MAX = 7` 容错缓冲机制，避免地理 DNS 偶发波动导致误删。
+- **去重规则**：判定完成后执行后缀树剪枝（如 `+.example.com` 覆盖 `*.a.example.com`）。
 
-本项目合并两个上游共 {len(entries):,} 条逐条实测，其中 {drop:,} 条（{drop/max(len(entries),1)*100:.1f}%）
-解析不到中国大陆 IP。
+---
 
-上游有两个：[blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) 的
-ChinaMax 覆盖广但机器生成，[v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
-的 `geosite:cn` 经人工审核但只有八千余条。两者取并集再统一过判据，
-覆盖率与准确性都比单用其一更好。
+## 规则集状态
 
-## 脚本做了什么
+| 指标 | 数据 |
+| :--- | :--- |
+| 上游原始条目 | {len(entries):,} |
+| 实测清洗保留 | {len(keep):,} |
+| 剔除境外/无效 | {drop:,} ({drop/max(len(entries),1)*100:.1f}%) |
+| GeoLite2 构建时间 | {built} |
+| 最近更新 (UTC) | {ts} |
 
-从位于中国大陆的服务器出发，每日执行：
+---
 
-1. 拉取两个上游列表并合并（`geosite:cn` 需递归展开其 `include:` 引用）
-2. 用国内解析器查询每个域名及其 `www.` 变体的 A 记录
-3. 判断 A 记录是否落在中国大陆 —— 依据 MaxMind GeoLite2-Country 官方库的
-   `country.iso_code == "CN"`。港澳台代码独立（`HK` / `MO` / `TW`），因此被排除：
-   从大陆直连港澳机房既不快，也不应按境内处理
-4. 只保留判定为大陆的域名，剔除被后缀覆盖的冗余项，生成两种格式并推送
+## 订阅与配置
 
-去重放在判定**之后**：若先去重，`+.example.com` 会覆盖掉
-`+.cdn.example.com`，而前者可能解析到境外、后者却在大陆，
-这条合法条目就会既无机会单独判定、又随父域一起被剔除。
-
-脚本**只做剔除，不做添加**，输出必定是上游的子集。
-误剔一个域名的后果是它走代理（慢但可用）。
-连续 {FAIL_MAX} 次判定失败才真正剔除，避免地理 DNS 的随机性造成误删。
-全量条目在 {ROTATE} 天内至少复核一次。
-
-判定错误无法完全避免 —— 只要 GeoIP 把某个 IP 标成 CN，
-该域名就会留在直连表里。`cidr_overrides.txt` 用于人工纠正已确认的个案。
-
-## 当前状态
-
-| | |
-| --- | --- |
-| 上游条目 | {len(entries):,} |
-| 保留 | {len(keep):,} |
-| 剔除 | {drop:,}（{drop/max(len(entries),1)*100:.1f}%） |
-| GeoLite2 构建于 | {built} |
-| 更新于 | {ts} |
-
-## 用法
-
-两种格式内容相同，按需取用。
-
-**YAML**（`behavior: domain` 规则集）
-
-```
-{base}/yaml/ChinaMax_Domain.yaml
-```
+### 1. Clash / Mihomo (YAML Rule-Provider)
 
 ```yaml
 rule-providers:
@@ -557,37 +594,30 @@ rule-providers:
     format: yaml
     interval: 86400
     url: '{base}/yaml/ChinaMax_Domain.yaml'
-    path: './RuleSet/ChinaMax_Domain.yaml'
+    path: './ruleset/ChinaMax_Domain.yaml'
 ```
 
-**纯文本列表**（每行一个域名，前导 `.` 表示含子域名）
+### 2. Surge / Quantumult X / Shadowrocket (纯文本列表)
 
-```
-{base}/list/ChinaMax_Domain.list
-```
+- **URL**: `{base}/list/ChinaMax_Domain.list`
+- **Surge 规则**:
+  ```ini
+  DOMAIN-SET,{base}/list/ChinaMax_Domain.list,DIRECT
+  ```
 
-```
-DOMAIN-SET,{base}/list/ChinaMax_Domain.list,DIRECT
-```
+---
 
-## 自行部署
+## 项目结构
 
-脚本在 [`tools/`](tools/)，只依赖 Python 3 标准库与 `dig`、`curl`。
-复制 `audit.conf.example` 为 `audit.conf` 并填写，
-`maxmind.conf` 填入 MaxMind 账号（`AccountID` / `LicenseKey`），然后：
+- `tools/audit.py`：审计与清洗核心引擎（无第三方重依赖，纯 Python 标准库 + mmdb 解析）。
+- `cidr_overrides.txt`：用于纠正个别 ASN/BGP 宣告偏差的人工静态 CIDR 覆盖表。
+- `state.json`：历史探测状态与滚动窗口持久化记录。
 
-```
-python3 audit.py --full     # 全量
-python3 audit.py            # 每日增量
-```
+## 许可说明
 
-需要在**中国大陆**的机器上运行，判据依赖国内解析器的解析结果。
-
-## 许可
-
-规则数据来自上游 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)。
-脚本以 MIT 发布。
-GeoLite2 数据由 MaxMind 提供（[GeoLite2 EULA](https://www.maxmind.com/en/geolite2/eula)）。
+- 规则集上游源自 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)。
+- GeoIP 基础数据由 MaxMind GeoLite2 提供（遵从 [GeoLite2 EULA](https://www.maxmind.com/en/geolite2/eula)）。
+- 本项目脚本按 MIT 协议开源。
 """)
 
 def git(*args, check=True):
@@ -614,8 +644,7 @@ def publish(keep_n, total_n):
         log("无变化，跳过提交")
         return
     msg = (f"更新规则集：保留 {keep_n:,} / {total_n:,}\n\n"
-           f"由 audit.py 每日自动生成。\n\n"
-           f"Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>")
+           f"由 audit.py 每日自动生成。")
     git("commit", "-q", "-m", msg)
     r = git("push", "-u", "origin", "main", check=False)
     if r.returncode:

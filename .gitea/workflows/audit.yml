@@ -56,8 +56,8 @@ jobs:
         env:
           GH_DEPLOY_KEY: ${{ secrets.GH_DEPLOY_KEY }}
         run: |
-          git config user.name "Gitea Actions"
-          git config user.email "actions@noreply.git.flandre.vip"
+          git config user.name "FlandreScarle7"
+          git config user.email "61271142+FlandreScarle7@users.noreply.github.com"
 
           # 暂存所有审计规则产物与状态文件
           git add yaml/ list/ README.md state.json tools/
