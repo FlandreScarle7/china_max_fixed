@@ -1,9 +1,9 @@
 # ChinaMax_Fixed —— 经国内 DNS 实测校验的中国大陆域名集合
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
-# GeoLite2 构建于 2026-11-06
-# 生成 2026-11-10 20:37:58 UTC
-# 上游 113481 条 → 保留 81030 条
+# GeoLite2 构建于 2026-11-10
+# 生成 2026-11-11 20:32:50 UTC
+# 上游 113481 条 → 保留 81032 条
 
 payload:
   - '+.0.zone'
@@ -12247,6 +12247,7 @@ payload:
   - '+.caxx.net'
   - '+.cazpw.com'
   - '+.cazx.net'
+  - '+.cb07fef6ccb66c8e.com'
   - '+.cb6037f1b10261.beer'
   - '+.cbaleague.com'
   - '+.cbarpay.com'
@@ -43709,6 +43710,7 @@ payload:
   - '+.lewangame.net'
   - '+.lewbin.com'
   - '+.lex.download.prss.microsoft.com'
+  - '+.lexar.com'
   - '+.lexed.org'
   - '+.lexiaigame.com'
   - '+.lexiangla.com'
