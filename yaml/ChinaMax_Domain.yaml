@@ -2,7 +2,7 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-11-13
-# 生成 2026-11-14 20:32:59 UTC
+# 生成 2026-11-15 20:33:11 UTC
 # 上游 113481 条 → 保留 81035 条
 
 payload:
