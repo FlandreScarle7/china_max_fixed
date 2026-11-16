@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-11-13
-# 生成 2026-11-15 20:33:11 UTC
-# 上游 113481 条 → 保留 81035 条
+# 生成 2026-11-16 20:32:51 UTC
+# 上游 113492 条 → 保留 81043 条
 
 .0.zone
 .000.link
@@ -503,6 +503,7 @@
 .07cn.com
 .07cn.net
 .07fe8668211012.beer
+.07fea775dffd96d4.com
 .07sh.com
 .081.com
 .0813fs.com
@@ -7983,6 +7984,8 @@
 .arkfeng.xyz
 .arkfwq.com
 .arkid.cc
+.arknights.com
+.arknights.com.cn
 .arkoo.com
 .arkrdigital.com
 .arkread.com
@@ -34964,6 +34967,7 @@
 .hybssy.com
 .hyc.com
 .hyccw.com
+.hycdn.cn
 .hycet.com
 .hycfw.com
 .hycgy.com
@@ -35032,7 +35036,9 @@
 .hyp-arch.com
 .hypefolio.com
 .hypefolio.net
+.hypergryph.cn
 .hypergryph.com
+.hypergryph.com.cn
 .hypergryph.net
 .hypersilicon.com
 .hyperstrong.com
@@ -51034,6 +51040,7 @@
 .ocssaas.com
 .oct-asia.com
 .oct-cts.com
+.octavedge.com
 .octbay.com
 .octcommercial.com
 .octeshow.com
@@ -63808,6 +63815,7 @@
 .tese5.com
 .tesegu.com
 .tesexiu.com
+.teshenqi.com
 .tesight.com
 .tesiro.com
 .tesolsh.com
