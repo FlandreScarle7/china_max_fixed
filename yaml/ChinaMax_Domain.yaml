@@ -1,9 +1,9 @@
 # ChinaMax_Fixed —— 经国内 DNS 实测校验的中国大陆域名集合
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
-# GeoLite2 构建于 2026-11-13
-# 生成 2026-11-16 20:32:51 UTC
-# 上游 113492 条 → 保留 81043 条
+# GeoLite2 构建于 2026-11-17
+# 生成 2026-11-17 20:33:28 UTC
+# 上游 113492 条 → 保留 81045 条
 
 payload:
   - '+.0.zone'
@@ -6001,6 +6001,7 @@ payload:
   - '+.accr.cc'
   - '+.accsh.org'
   - '+.accuramed.com'
+  - '+.accurate-china.com'
   - '+.accurate520.com'
   - '+.accuratead.cn'
   - '+.accxiaoheihe.com'
@@ -47415,6 +47416,7 @@ payload:
   - '+.mikuclub.fun'
   - '+.mikumikumi.xyz'
   - '+.mil.cn'
+  - '+.milan.com'
   - '+.milanvip.com'
   - '+.milchips.com'
   - '+.mileage.vip'
