@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-11-17
-# 生成 2026-11-17 20:33:28 UTC
-# 上游 113492 条 → 保留 81045 条
+# 生成 2026-11-18 20:33:51 UTC
+# 上游 113506 条 → 保留 81059 条
 
 payload:
   - '+.0.zone'
@@ -1217,6 +1217,7 @@ payload:
   - '+.1718china.com'
   - '+.1718world.com'
   - '+.171win.net'
+  - '+.172.com'
   - '+.17293879b10261.beer'
   - '+.172haoka.vip'
   - '+.172l.com'
@@ -3993,6 +3994,7 @@ payload:
   - '+.58v5.cn'
   - '+.58wan.com'
   - '+.58wanwan.com'
+  - '+.58wos.com.cn'
   - '+.58wuji.com'
   - '+.58xinrui.com'
   - '+.58xuexi.com'
@@ -8785,6 +8787,7 @@ payload:
   - '+.baishan-cloud.net'
   - '+.baishan-gateway.com'
   - '+.baishan.com'
+  - '+.baishancdnx.cn'
   - '+.baishancdnx.com'
   - '+.baishancdnx.net'
   - '+.baishancdnx.top'
@@ -43506,6 +43509,7 @@ payload:
   - '+.lefang365.com'
   - '+.lefanglj.com'
   - '+.leffercode.com'
+  - '+.lefile.cn'
   - '+.leftfm.com'
   - '+.leftlady.com'
   - '+.leftshadow.com'
@@ -43630,6 +43634,8 @@ payload:
   - '+.lenovocloudos.com'
   - '+.lenovoconnect.com'
   - '+.lenovoeservice.com'
+  - '+.lenovofoundation.cn'
+  - '+.lenovofuturecenter.com'
   - '+.lenovogame.com'
   - '+.lenovohci.com'
   - '+.lenovoimage.com'
@@ -45361,6 +45367,7 @@ payload:
   - '+.lujiandairy.com'
   - '+.lujianxin.com'
   - '+.lujiazuiforum.org'
+  - '+.lujincaifu.com'
   - '+.lujingtao.com'
   - '+.lujiya.com'
   - '+.lukachen.com'
@@ -48302,6 +48309,7 @@ payload:
   - '+.mt-viki.com'
   - '+.mt-wire.com'
   - '+.mt.cc'
+  - '+.mt180.com'
   - '+.mt3.com'
   - '+.mt77.com'
   - '+.mt888vip.com'
@@ -51783,6 +51791,7 @@ payload:
   - '+.padtf.com'
   - '+.paer.work'
   - '+.pafj.net'
+  - '+.pafoundation.org.cn'
   - '+.pafwl.com'
   - '+.pag.art'
   - '+.pageadmin.net'
@@ -52316,6 +52325,7 @@ payload:
   - '+.pgyidc.com'
   - '+.pgzs.com'
   - '+.ph-fc.com'
+  - '+.ph.com.cn'
   - '+.ph66.com'
   - '+.phaetonsemi.com'
   - '+.phalapi.net'
@@ -52488,6 +52498,7 @@ payload:
   - '+.pinfun.com'
   - '+.ping-jia.net'
   - '+.ping99.com'
+  - '+.pingan.cn'
   - '+.pingan.com'
   - '+.pingan.com.cn'
   - '+.pinganfang.com'
@@ -54458,6 +54469,7 @@ payload:
   - '+.qphospital.com'
   - '+.qpic.cn'
   - '+.qpjylm.com'
+  - '+.qpmcn.com'
   - '+.qpoc.com'
   - '+.qpwater.com'
   - '+.qpzq.net'
@@ -75894,6 +75906,7 @@ payload:
   - '+.yqbdt.com'
   - '+.yqbimg.com'
   - '+.yqbimg.net'
+  - '+.yqbmall.com'
   - '+.yqchjd.com'
   - '+.yqcn.com'
   - '+.yqdtv.com'
@@ -78047,6 +78060,7 @@ payload:
   - '+.zhaokeli.com'
   - '+.zhaolaobanla.com'
   - '+.zhaoliangji.com'
+  - '+.zhaoliangjipc.com'
   - '+.zhaomi.cn'
   - '+.zhaomishijie.com'
   - '+.zhaomu.com'
