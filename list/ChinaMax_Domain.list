@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-11-17
-# 生成 2026-11-18 20:33:51 UTC
-# 上游 113506 条 → 保留 81059 条
+# 生成 2026-11-19 20:33:07 UTC
+# 上游 113506 条 → 保留 81060 条
 
 .0.zone
 .000.link
@@ -80766,6 +80766,7 @@
 .zyjtgas.com
 .zyjyxx.com
 .zyjyyun.com
+.zykjct.com
 .zykjgame.com
 .zyktech.com
 .zykths.com
