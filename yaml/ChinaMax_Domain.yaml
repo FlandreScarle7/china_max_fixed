@@ -2,8 +2,8 @@
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
 # GeoLite2 构建于 2026-11-17
-# 生成 2026-11-19 20:33:07 UTC
-# 上游 113506 条 → 保留 81060 条
+# 生成 2026-11-20 20:33:05 UTC
+# 上游 113509 条 → 保留 81066 条
 
 payload:
   - '+.0.zone'
@@ -140,6 +140,7 @@ payload:
   - '+.023zhang.xin'
   - '+.02405.com'
   - '+.0245.net'
+  - '+.0246b05e23a644b5.com'
   - '+.024888.net'
   - '+.024bj.com'
   - '+.024eps.com'
@@ -21728,6 +21729,7 @@ payload:
   - '+.echippqc.com'
   - '+.echo-isoftstone.com'
   - '+.echoing.tech'
+  - '+.echooai.com'
   - '+.echu-cable.com'
   - '+.echunlan.com'
   - '+.eci-everconn.com'
@@ -23386,6 +23388,7 @@ payload:
   - '+.fayiyi.com'
   - '+.fayufaguo.com'
   - '+.fazhijx.com'
+  - '+.fazhipro.com'
   - '+.fazz.fun'
   - '+.fb46cd5483f029aa.com'
   - '+.fb4bc82f71019.beer'
@@ -44025,6 +44028,7 @@ payload:
   - '+.lichiwei.com'
   - '+.lichong.work'
   - '+.lichuang.ren'
+  - '+.licic.net'
   - '+.lickeji.com'
   - '+.licqi.com'
   - '+.lida100.com'
@@ -56489,6 +56493,7 @@ payload:
   - '+.sa-log.com'
   - '+.sa-token.cc'
   - '+.saaas.com'
+  - '+.saasfz.com'
   - '+.saaslb.com'
   - '+.saasruanjian.com'
   - '+.saaswaf.com'
@@ -77284,6 +77289,7 @@ payload:
   - '+.zangao.com'
   - '+.zangaopet.com'
   - '+.zangenggroup.com'
+  - '+.zangft.com'
   - '+.zanggekuangye.com'
   - '+.zanglikun.com'
   - '+.zangto.com'
