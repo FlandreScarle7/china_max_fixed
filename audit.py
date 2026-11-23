@@ -546,10 +546,6 @@ def write_outputs(keep, entries, state, built):
 
     copy_tools()
 
-    slug = "FlandreScarle7/china_max_fixed"
-    if GIT_REMOTE and ":" in GIT_REMOTE:
-        slug = GIT_REMOTE.split(":")[-1].removesuffix(".git")
-    base = f"{RAW_BASE}/{slug}/main"
     drop = len(entries) - len(keep)
     with open(os.path.join(REPO, "README.md"), "w") as f:
         f.write(f"""# china_max_fixed
@@ -579,31 +575,6 @@ def write_outputs(keep, entries, state, built):
 | 剔除境外/无效 | {drop:,} ({drop/max(len(entries),1)*100:.1f}%) |
 | GeoLite2 构建时间 | {built} |
 | 最近更新 (UTC) | {ts} |
-
----
-
-## 订阅与配置
-
-### 1. Clash / Mihomo (YAML Rule-Provider)
-
-```yaml
-rule-providers:
-  China_Domain:
-    type: http
-    behavior: domain
-    format: yaml
-    interval: 86400
-    url: '{base}/yaml/ChinaMax_Domain.yaml'
-    path: './ruleset/ChinaMax_Domain.yaml'
-```
-
-### 2. Surge / Quantumult X / Shadowrocket (纯文本列表)
-
-- **URL**: `{base}/list/ChinaMax_Domain.list`
-- **Surge 规则**:
-  ```ini
-  DOMAIN-SET,{base}/list/ChinaMax_Domain.list,DIRECT
-  ```
 
 ---
 

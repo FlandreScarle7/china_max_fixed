@@ -28,31 +28,6 @@
 
 ---
 
-## 订阅与配置
-
-### 1. Clash / Mihomo (YAML Rule-Provider)
-
-```yaml
-rule-providers:
-  China_Domain:
-    type: http
-    behavior: domain
-    format: yaml
-    interval: 86400
-    url: 'https://raw.githubusercontent.com/FlandreScarle7/china_max_fixed/main/yaml/ChinaMax_Domain.yaml'
-    path: './ruleset/ChinaMax_Domain.yaml'
-```
-
-### 2. Surge / Quantumult X / Shadowrocket (纯文本列表)
-
-- **URL**: `https://raw.githubusercontent.com/FlandreScarle7/china_max_fixed/main/list/ChinaMax_Domain.list`
-- **Surge 规则**:
-  ```ini
-  DOMAIN-SET,https://raw.githubusercontent.com/FlandreScarle7/china_max_fixed/main/list/ChinaMax_Domain.list,DIRECT
-  ```
-
----
-
 ## 项目结构
 
 - `tools/audit.py`：审计与清洗核心引擎（无第三方重依赖，纯 Python 标准库 + mmdb 解析）。

@@ -25,7 +25,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Install Runtime Dependencies
         run: |
@@ -62,17 +62,16 @@ jobs:
           # 暂存所有审计规则产物与状态文件
           git add yaml/ list/ README.md state.json tools/
 
-          if git diff --cached --quiet; then
+          if ! git diff --cached --quiet; then
+            COMMIT_MSG="更新规则集：$(date +%Y-%m-%d) [skip ci]"
+            git commit -m "$COMMIT_MSG"
+
+            # 1. 提交并推送到 Gitea 本地仓库
+            echo "Pushing changes to Gitea origin..."
+            git push origin main
+          else
             echo "无变更需要提交。"
-            exit 0
           fi
-
-          COMMIT_MSG="更新规则集：$(date +%Y-%m-%d) [skip ci]"
-          git commit -m "$COMMIT_MSG"
-
-          # 1. 提交并推送到 Gitea 本地仓库
-          echo "Pushing changes to Gitea origin..."
-          git push origin main
 
           # 2. 如果配置了 GitHub 部署密钥，同步推送到 GitHub
           if [ -n "$GH_DEPLOY_KEY" ]; then
@@ -81,8 +80,8 @@ jobs:
             echo "$GH_DEPLOY_KEY" > ~/.ssh/id_ed25519
             chmod 600 ~/.ssh/id_ed25519
             ssh-keyscan -t ed25519,rsa github.com >> ~/.ssh/known_hosts 2>/dev/null || true
-            git remote add github git@github.com:FlandreScarle7/china_max_fixed.git 2>/dev/null || true
-            git push github main || echo "Warning: GitHub push failed"
+            git remote add github git@github.com:FlandreScarle7/china_max_fixed.git 2>/dev/null || git remote set-url github git@github.com:FlandreScarle7/china_max_fixed.git
+            git push github main
           fi
 
           echo "所有发布推送完成！"
