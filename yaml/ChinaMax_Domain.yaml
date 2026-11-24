@@ -1,9 +1,9 @@
 # ChinaMax_Fixed —— 经国内 DNS 实测校验的中国大陆域名集合
 # 上游 blackmatrix7/ios_rule_script ChinaMax_Domain
 # 判据 国内解析器解出的 A 记录在 MaxMind GeoLite2 中 country=CN（不含 HK/MO/TW）
-# GeoLite2 构建于 2026-11-20
-# 生成 2026-11-23 20:33:44 UTC
-# 上游 113512 条 → 保留 81069 条
+# GeoLite2 构建于 2026-11-24
+# 生成 2026-11-24 20:32:51 UTC
+# 上游 113512 条 → 保留 81070 条
 
 payload:
   - '+.0.zone'
@@ -12762,6 +12762,7 @@ payload:
   - '+.cdn-cba.com'
   - '+.cdn-go.cn'
   - '+.cdn-speed.com'
+  - '+.cdn.fun'
   - '+.cdn.me'
   - '+.cdn.shanghai.nyu.edu'
   - '+.cdn.show'
@@ -30742,7 +30743,6 @@ payload:
   - '+.haoji.me'
   - '+.haojiao.cc'
   - '+.haojiaolian.com'
-  - '+.haojie.work'
   - '+.haojieyun.com'
   - '+.haojing.org'
   - '+.haojit.com'
@@ -30765,7 +30765,6 @@ payload:
   - '+.haoku.net'
   - '+.haolangtech.com'
   - '+.haoled9999.com'
-  - '+.haolidayiliao.com'
   - '+.haolietou.com'
   - '+.haolifa.com'
   - '+.haolike.com'
@@ -50763,6 +50762,7 @@ payload:
   - '+.nt56.net'
   - '+.nt6y.com'
   - '+.ntalker.com'
+  - '+.ntc-lft.com'
   - '+.ntc.sh'
   - '+.ntcaac.com'
   - '+.ntcchina.com'
@@ -55201,6 +55201,7 @@ payload:
   - '+.qzktzc.com'
   - '+.qzlanwei.com'
   - '+.qzldkj.com'
+  - '+.qzmayouquan.com'
   - '+.qzmktjt.com'
   - '+.qzmtgs.com'
   - '+.qznxt.com'
